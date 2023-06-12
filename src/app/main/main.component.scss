@@ -1,0 +1,36 @@
+.main {
+    display: flex;
+    color: white;
+
+    img {
+        height: 800px;
+        width: 500px;
+        object-fit: cover;
+        padding-left: 100px;
+    }
+}
+
+.my-name {
+    display: flex;
+
+    .rotate {
+        transform: rotate(-90deg);
+        font-size: 64px;
+        // margin: 0;
+    }
+}
+
+.name-job {
+
+    h1 {
+        font-size: 90px;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 58px;
+        color: #ff4747;
+        margin: 0;
+        text-align: center;
+    }
+}

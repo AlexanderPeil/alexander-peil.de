@@ -1,0 +1,58 @@
+.main {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding-right: 100px;
+
+    img {
+        height: 705px;
+        width: 646px;
+        object-fit: cover;
+        padding-left: 100px;
+    }
+}
+
+.my-name {
+    display: flex;
+    margin-top: 200px;
+
+    .rotate {
+        transform: rotate(-90deg);
+        font-size: 64px;
+        // margin: 0;
+    }
+}
+
+.name-job {
+
+    h1 {
+        font-size: 90px;
+        margin-top: -23px;
+        margin-bottom: 30px;
+        // margin: 0;
+    }
+
+    h2 {
+        font-size: 58px;
+        color: #ff4747;
+        text-align: center;
+        // margin: 0;
+    }
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+.lets-talk {
+    button {
+        color: white;
+        background-color: #fa7902;
+        padding: 15px 30px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+    }
+}

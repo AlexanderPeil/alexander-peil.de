@@ -1,8 +1,14 @@
 <div class="my-skills">
-    <div></div>
-    <div>
+    <div class="my-skills-logos">
+        <div *ngFor="let logo of logosContent">
+            <img [src]="logo.logos">
+            <p>{{ logo.description }}</p>
+        </div>
+    </div>
+    <div class="my-skills-text">
         <h1>My skills</h1>
         <p>I have grown my frontend developments skills that have allowed me to create different real projects.</p>
         <button>Get in touch</button>
     </div>
+    <img class="red-line" src="../../assets/img/red-line.png">
 </div>

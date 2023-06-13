@@ -39,6 +39,15 @@
 .personal {
     display: flex;
     align-items: center;
+
+    img {
+        transition: all 125ms ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
 }
 
 .about-me-img {

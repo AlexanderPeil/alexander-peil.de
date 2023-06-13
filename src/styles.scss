@@ -3,6 +3,25 @@
 html, body { height: 100%; }
 body { 
     margin: 0; 
-    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    // font-family: Roboto, "Helvetica Neue", sans-serif; 
+    font-family: Poppins, sans-serif !important;
     background-color: #141d2f;
+}
+
+html {
+    scroll-behavior: smooth!important;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff4747;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #fa7902;
+}
+
+::-webkit-scrollbar-track {
+    background: #101826;
 }

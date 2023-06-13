@@ -21,18 +21,30 @@
     width: 471px;
 
     img {
-        padding-right: 55px;
         height: 50px;
-        width: 35px;
+        object-fit: cover;
     }
+}
+
+.top-img {
+    width: 35px;
+    padding-right: 55px;
+}
+
+.bottom-img {
+    width: 50px;
+    padding-right: 43px;
 }
 
 .personal {
     display: flex;
+    align-items: center;
 }
 
 .about-me-img {
     padding-right: 167px;
+    display: flex;
+    align-items: center;
 
     img {
         height: 453px;

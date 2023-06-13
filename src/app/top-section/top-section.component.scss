@@ -3,6 +3,8 @@
     justify-content: space-between;
     color: white;
     padding-right: 100px;
+    // margin-top is so far untill I add the right images. Then I must delete it.
+    margin-top: 180px;
 
     img {
         height: 705px;
@@ -14,29 +16,33 @@
 
 .my-name {
     display: flex;
+    align-items: center;
     margin-top: 200px;
 
     .rotate {
         transform: rotate(-90deg);
-        font-size: 64px;
-        // margin: 0;
+        font-size: 66px;
+        font-weight: 400;
+        line-height: 120%;
+        margin: 0;
     }
 }
 
 .name-job {
 
     h1 {
-        font-size: 90px;
-        margin-top: -23px;
-        margin-bottom: 30px;
-        // margin: 0;
+        font-size: 86px;
+        font-weight: 700;
+        line-height: 120%;
+        margin: 0;
     }
 
     h2 {
-        font-size: 58px;
+        font-size: 56px;
+        font-weight: 400;
+        line-height: 120%;
         color: #ff4747;
-        text-align: center;
-        // margin: 0;
+        margin: 0;
     }
 }
 
@@ -47,12 +53,25 @@
 } 
 
 .lets-talk {
+
     button {
         color: white;
-        background-color: #fa7902;
+        background: #FA7902;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
         padding: 15px 30px;
         border-radius: 10px;
         border: none;
         cursor: pointer;
+        width: 165px;
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 120%;
+        margin-top: 50px;
+        transition: all 225ms ease-in-out;
+
+        &:hover {
+            background-color: #ff4747;
+            transform: scale(1.2);
+        }
     }
 }

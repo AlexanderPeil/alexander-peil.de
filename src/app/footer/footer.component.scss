@@ -1,0 +1,51 @@
+.line {
+    width: 100vw;
+    height: 5px;
+    background-color: #fa7902;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    margin: 100px;
+}
+
+.footer-name {
+    span {
+        color: white;
+        text-decoration: none;
+        font-size: 35px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
+
+.imprint {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+.copyright {
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 28px;
+    // text-align: left;
+}
+
+.footer-img {
+    display: flex;
+    gap: 50px;
+
+    img {
+        cursor: pointer;
+        transition: all 125ms ease-in-out;
+
+        &:hover {
+            transform: scale(1.4);
+        }
+    }
+
+}

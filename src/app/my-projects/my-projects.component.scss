@@ -14,3 +14,78 @@ h1 {
     line-height: 19.2px;
     text-align: center;
 }
+
+.project-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 50px 100px 50px 172px;
+
+    img {
+        height: 460px;
+    }
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    width: 513px;
+    margin-bottom: 50px;
+
+    h2 {
+        color: #ff4747;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38px;
+    }
+
+    span {
+        color: #fa7902;
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 28px;
+    }
+
+    p {
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+    }
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        width: 375px;
+    }
+
+    button {
+        border-radius: 10px;
+        padding: 15px 30px;
+        color: white;
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 28px;
+        cursor: pointer;
+        margin-top: 15px;
+
+        &:hover {
+            background-color: #fa7902;
+            transition: all 225ms ease-in-out;
+        }
+    }
+}
+
+.live-test-btn {
+    width: 152px;
+    height: 58px;
+    background-color: #ff4747;
+    border: none;
+}
+
+.github-btn {
+    width: 137px;
+    height: 58px;
+    background-color: #141d2f;
+    border: 1px solid #FA7902;
+}

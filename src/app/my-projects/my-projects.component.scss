@@ -1,10 +1,33 @@
+.my-projects-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.red-line-left {
+    background-color: #ff4747;
+    width: 140px;
+    height: 5px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-bottom: 45px;
+}
+
+.red-line-right {
+    background-color: #ff4747;
+    width: 400px;
+    height: 5px;
+    margin-bottom: 45px;
+}
+
 h1 {
     font-size: 90px;
     font-weight: 700;
     line-height: 108px;
     color: white;
     text-align: center;
-    margin-top: 200px;
+    margin: 0;
 }
 
 .headline {

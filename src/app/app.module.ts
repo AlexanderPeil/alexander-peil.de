@@ -10,6 +10,7 @@ import { TopSectionComponent } from './top-section/top-section.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { MyProjectsComponent } from './my-projects/my-projects.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MyProjectsComponent } from './my-projects/my-projects.component';
     TopSectionComponent,
     AboutMeComponent,
     MySkillsComponent,
-    MyProjectsComponent
+    MyProjectsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,16 @@
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
 .main-content {
     display: flex;
     justify-content: space-between;
     color: white;
     margin-top: 50px;
     padding: 0 100px;
+    z-index: 3;
+    position: relative;
     
 
     h1 {
@@ -39,14 +46,16 @@
 .personal {
     display: flex;
     align-items: center;
+    transition: 225ms all;
 
     img {
-        transition: all 125ms ease-in-out;
+        transition: all 225ms ease-in-out;
         cursor: pointer;
 
         &:hover {
-            transform: scale(1.2);
-        }
+            transform: rotate(360deg); 
+         }
+
     }
 }
 
@@ -54,6 +63,7 @@
     padding-right: 167px;
     display: flex;
     align-items: center;
+    margin-top: 100px;
 
     img {
         height: 453px;

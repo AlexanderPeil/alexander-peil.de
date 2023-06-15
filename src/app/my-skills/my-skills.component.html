@@ -1,6 +1,6 @@
 <div class="my-skills">
     <div class="my-skills-logos">
-        <div *ngFor="let logo of logosContent">
+        <div class="logo-container" *ngFor="let logo of logosContent">
             <img [src]="logo.logos">
             <p>{{ logo.description }}</p>
         </div>

@@ -26,16 +26,46 @@ nav {
 }
 
 .header-links {
-
     a {
-        color: white;
-        text-decoration: none;
-        padding-right: 25px;
-        font-size: 23px;
-
-        &:hover {
-            color: #fa7902;
-            transition: all ease-in-out 125ms;
-        }
+      color: white;
+      text-decoration: none;
+      padding-right: 25px;
+      font-size: 23px;
+      position: relative;
+  
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background-color: #fa7902;
+        transition: width 225ms ease-in-out;
+      }
+  
+      &:hover {
+        color: #fa7902;
+      }
     }
-}
+  }
+
+  .about-me-link {
+    &:hover::after {
+        width: 82% !important;
+      }
+  }
+
+  .skills-link {
+    &:hover::after {
+        width: 70% !important;
+      }
+  }
+
+  .portfolio-link {
+    &:hover::after {
+        width: 80% !important;
+      }
+  }
+  
+  

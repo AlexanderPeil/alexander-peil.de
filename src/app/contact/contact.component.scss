@@ -4,7 +4,7 @@
     align-items: center;
 
     .contact-red-line {
-        width: 60px;
+        width: 80px;
         height: 5px;
         background-color: #ff4747;
         border-top-right-radius: 15px;
@@ -23,6 +23,7 @@
 
 .contact-content {
     display: flex;
+    justify-content: space-between;
     margin-bottom: 200px;
 }
 
@@ -31,6 +32,7 @@ form {
     flex-direction: column;
     align-items: center;
     gap: 35px;
+    margin-right: 100px;
 
     input, textarea {
         font-size: 16px;
@@ -41,7 +43,7 @@ form {
         border-radius: 10px;
         cursor: pointer;
         box-sizing: border-box;
-        width: 617px;
+        width: 700px;
 
         &:hover {
             border: 1px solid #cf680a;
@@ -78,7 +80,8 @@ form {
 
         &:hover {
             background-color: #FF4747;
-            transform: scale(1.2);
+            width: 270px;
+            height: 75px;
         }
     }
 }

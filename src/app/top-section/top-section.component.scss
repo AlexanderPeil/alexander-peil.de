@@ -3,14 +3,22 @@
     justify-content: space-between;
     color: white;
     padding-right: 100px;
-    // margin-top is so far untill I add the right images. Then I must delete it.
     margin-top: 180px;
+    // z-index: 2;
+    // position: relative;
 
-    img {
+    .my-img {
+        position: absolute;
+        top: 100px;
         height: 705px;
-        width: 646px;
+        width: 530px;
         object-fit: cover;
         padding-left: 100px;
+    }
+
+    .bg-img {
+        width: 690px;
+        height: 671px;
     }
 }
 
@@ -50,7 +58,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-} 
+    margin-top: -75px;
+    position: relative;
+    z-index: 2;
+}
 
 .lets-talk {
 
@@ -66,12 +77,141 @@
         font-size: 23px;
         font-weight: 400;
         line-height: 120%;
-        margin-top: 50px;
-        transition: all 225ms ease-in-out;
+        margin-top: 30px;
+        transition: all 125ms ease-in-out;
 
         &:hover {
             background-color: #ff4747;
             transform: scale(1.2);
         }
+    }
+}
+
+.bottom-content {
+    display: flex;
+    position: relative;
+}
+
+.bg-image {
+    position: absolute;
+    width: 100vw;
+    top: -526px;
+}
+
+.bottom-links {
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+}
+
+.red-line {
+    height: 5px;
+    width: 100px;
+    background-color: #ff4747;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.info-links {
+    display: flex;
+    gap: 40px;
+
+    img {
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            10% {
+                transform: scale(1.1);
+            }
+
+            20% {
+                transform: scale(1.2);
+            }
+
+            30% {
+                transform: scale(1.3);
+            }
+
+            40% {
+                transform: scale(1.4);
+            }
+
+            50% {
+                transform: scale(1.4);
+            }
+
+            60% {
+                transform: scale(1.3);
+            }
+
+            70% {
+                transform: scale(1.2);
+            }
+
+            80% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        &:hover {
+            animation: pulse 1s infinite;
+        }
+    }
+}
+
+
+.email {
+    position: relative;
+
+    a {
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 28px;
+        color: white;
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+        // transition: color 0.3s;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+
+        .element::before {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            // background: linear-gradient(to #fa7902);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            z-index: -1;
+            transition: transform 0.3s;
+          }
+
+        &:hover::before {
+            transform: translateX(100%);
+        }
+
+        &:hover {
+            color: #fa7902; 
+          }
     }
 }

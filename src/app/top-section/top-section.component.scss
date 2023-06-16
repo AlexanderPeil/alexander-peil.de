@@ -64,6 +64,7 @@
 }
 
 .lets-talk {
+    // padding-top: 50px;
 
     button {
         color: white;
@@ -74,6 +75,7 @@
         border: none;
         cursor: pointer;
         width: 165px;
+        height: 58px;
         font-size: 23px;
         font-weight: 400;
         line-height: 120%;
@@ -114,14 +116,37 @@
 }
 
 .scroll-down {
-    transform: rotate(90deg);
     margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
 
     span {
+        transform: rotate(90deg);
         color: white;
         font-size: 23px;
         font-weight: 400;
         line-height: 28px;
+    }
+
+    img {
+        width: 25px;
+        height: 25px;
+        animation: animate-arrow 1s ease-in-out infinite;
+
+        @keyframes animate-arrow {
+
+            0% {
+                transform: translateY(20px);
+            }
+            50% {
+                transform: translateY(50px);
+            }
+            100% {
+                transform: translateY(20px);
+            }
+        }
     }
 }
 

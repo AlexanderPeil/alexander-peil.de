@@ -36,7 +36,25 @@ h1 {
     font-size: 16px;
     font-weight: 400;
     line-height: 19.2px;
+    // position: relative;
     text-align: center;
+}
+
+.my-project-main-content {
+    position: relative;
+}
+
+.my-projects-shadow-top {
+    position: absolute;
+    top: -150px;
+    left: -450px;
+    transform: rotate(45deg);
+}
+
+.my-projects-shadow-bottom {
+    position: absolute;
+    right: -450px;
+    transform: rotate(45deg);
 }
 
 .project-content {
@@ -44,10 +62,25 @@ h1 {
     align-items: center;
     justify-content: space-around;
     margin: 50px 100px 50px 172px;
+    // position: relative;
 
-    img {
-        height: 460px;
-    }
+    // .my-projects-shadow-top {
+    //     position: absolute;
+    //     top: -120px;
+    //     left: -600px;
+    //     transform: rotate(45deg);
+    // }
+
+    // .my-projects-shadow-bottom {
+    //     position: absolute;
+    //     right: -560px;
+    //     transform: rotate(45deg);
+    // }
+}
+
+.projects-img {
+    height: 460px;
+    z-index: 0;
 }
 
 .project {
@@ -55,6 +88,7 @@ h1 {
     flex-direction: column;
     width: 513px;
     margin-bottom: 50px;
+    z-index: 0;
 
     h2 {
         color: #ff4747;
@@ -114,12 +148,12 @@ h1 {
         transition: transform 0.5s ease-in-out;
         z-index: -1;
         border-radius: 10px;
-      }
-      
-      &:hover::before {
+    }
+
+    &:hover::before {
         transform: scaleX(1);
         transform-origin: left;
-      }
+    }
 }
 
 .github-btn {
@@ -139,10 +173,10 @@ h1 {
         transform-origin: left;
         transition: transform 0.5s ease-in-out;
         z-index: -1;
-      }
-      
-      &:hover::before {
+    }
+
+    &:hover::before {
         transform: scaleX(1);
         transform-origin: right;
-      }
+    }
 }

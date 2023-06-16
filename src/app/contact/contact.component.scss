@@ -25,6 +25,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 200px;
+    position: relative;
 }
 
 form {
@@ -59,10 +60,6 @@ form {
         padding: 15px 25px;
     }
 
-    // textarea {
-
-    // }
-
     button {
         width: 253px;
         height: 58px;
@@ -83,6 +80,11 @@ form {
             width: 270px;
             height: 75px;
         }
+    }
+
+    img {
+        cursor: pointer;
+        margin-left: auto;
     }
 }
 
@@ -106,4 +108,11 @@ form {
         line-height: 19px;
         width: 473px;
     }
+}
+
+.contact-shadow {
+    position: absolute;
+    left: -550px;
+    top: -350px;
+    transform: scaleY(-1) rotate(-90deg);
 }

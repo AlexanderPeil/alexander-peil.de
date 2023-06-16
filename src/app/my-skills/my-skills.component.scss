@@ -5,6 +5,7 @@
     color: white;
     margin-top: 250px;
     width: 100vw;
+    position: relative;
     
     h1 {
         font-size: 90px;
@@ -49,6 +50,7 @@
     gap: 54px;
     width: 721px;
     margin-left: 100px;
+    z-index: 0;
 }
 
 .logo-container {
@@ -127,4 +129,11 @@
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     margin-top: 100px;
+}
+
+.my-skills-shadow {
+    position: absolute;
+    transform: rotate(45deg);
+    top: -75px;
+    left: -250px;
 }

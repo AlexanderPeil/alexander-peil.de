@@ -1,12 +1,12 @@
 <div class="my-skills" id="mySkills">
     <img class="my-skills-shadow" src="../../assets/img/my-skills-shadow.png">
-    <div class="my-skills-logos">
+    <div class="my-skills-logos" data-aos="fade-right">
         <div class="logo-container" *ngFor="let logo of logosContent">
             <img [src]="logo.logos">
             <p>{{ logo.description }}</p>
         </div>
     </div>
-    <div class="my-skills-text">
+    <div class="my-skills-text" data-aos="fade-left">
         <h1>My skills</h1>
         <p>I have grown my frontend developments skills that have allowed me to create different real projects.</p>
         <a href="#contact">

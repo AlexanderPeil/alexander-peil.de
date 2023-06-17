@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+// import AOS from 'aos'; global.AOS = AOS;
 
 @Component({
   selector: 'app-about-me',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-me.component.scss']
 })
 export class AboutMeComponent {
+
+  // ngOnInit(): void {
+  //   AOS.init();
+  // }
 
 }

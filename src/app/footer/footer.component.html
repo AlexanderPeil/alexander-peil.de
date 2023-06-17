@@ -1,23 +1,25 @@
 <div class="line"></div>
 <footer>
     <div>
-        <div class="footer-name" (click)="scrollToTop()">
-            <span>Ale</span>
-            <span [ngStyle]="{'color': '#ff4747'}">x</span>
-            <span>and</span>
-            <span [ngStyle]="{'color': '#fa7902'}">e</span>
-            <span>r</span>
+        <div class="footer-name">
+            <a routerLink="/" (click)="scrollToTop()">
+                <span>Ale</span>
+                <span [ngStyle]="{'color': '#ff4747'}">x</span>
+                <span>and</span>
+                <span [ngStyle]="{'color': '#fa7902'}">e</span>
+                <span>r</span>
+            </a>
         </div>
         <div class="imprint-container">
-            <a routerLink="/imprint" href="/imprint" class="imprint">Impressum</a>
+            <a routerLink="/imprint" class="imprint">Impressum</a>
         </div>
     </div>
     <div class="copyright">
         © Alexander Peil 2023
     </div>
     <div class="footer-img">
-        <img src="../../assets/img/github-img.png">
-        <img src="../../assets/img/email-img.png">
-        <img src="../../assets/img/linkedin-img.png">
+        <a href="https://github.com/" target="blank"><img src="../../assets/img/github-img.png"></a>
+        <a href="#"><img src="../../assets/img/email-img.png"></a>
+        <a href="#"><img src="../../assets/img/linkedin-img.png"></a>
     </div>
 </footer>

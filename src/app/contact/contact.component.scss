@@ -33,10 +33,12 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 35px;
+    gap: 60px;
     margin-right: 100px;
+    position: relative;
 
-    input, textarea {
+    input,
+    textarea {
         font-size: 16px;
         font-weight: 400;
         line-height: 19px;
@@ -53,8 +55,13 @@ form {
 
         &:focus-visible {
             outline: none;
+            color: white;
+            border: 1px solid #cf680a;
         }
 
+        &:focus::placeholder {
+            color: transparent;
+        }
     }
 
     input {
@@ -134,6 +141,23 @@ form {
             }
         }
     }
+
+    span {
+        color: #FA7902;
+        position: absolute;
+        left: 10px;
+    }
+}
+
+.name-required {
+    top: 70px;
+}
+
+.email-required {
+    top: 180px;
+}
+.message-required {
+    top: 440px;
 }
 
 .contact-left {

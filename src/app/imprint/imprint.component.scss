@@ -9,5 +9,10 @@ body {
     a {
         text-decoration: none;
         color: white;
+        transition: all 125ms ease-in-out;
+
+        &:hover {
+            color: #fa7902;
+        }
     }
 }

@@ -11,10 +11,13 @@
             projects with my work.</p>
         <span>Need a Frontend developer? <b>Contact me!</b></span>
     </div>
-    <form data-aos="flip-right">
-        <input required type="text" placeholder="Your name">
-        <input required type="email" placeholder="Your email">
-        <textarea required type="text" cols="30" rows="10" placeholder="Your message"></textarea>
+    <form data-aos="flip-right" onsubmit="sendMail()" action="" method="post">
+        <input required type="text" placeholder="Your name" (focus)="showEnterName()" (blur)="hideEntername()">
+        <span class="name-required" [hidden]="!displayEnterName">Please enter your name</span>
+        <input required type="email" placeholder="Your email" (focus)="showEnterEmail()" (blur)="hideEnterEmail()">
+        <span class="email-required" [hidden]="!displayEnterEmail">Please enter your email</span>
+        <textarea required type="text" cols="30" rows="10" placeholder="Your message" (focus)="showEnterMessage()" (blur)="hideEnterMessage()"></textarea>
+        <span class="message-required" [hidden]="!displayEnterMessage">Please enter your message</span>
         <button>Send message :)</button>
         <img (click)="scrollToTop()" src="../../assets/img/arrow-up.png">
     </form>

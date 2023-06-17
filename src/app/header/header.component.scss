@@ -23,13 +23,17 @@ nav {
         font-weight: 700;
         cursor: pointer;
     }
+
+    a {
+      text-decoration: none;
+    }
 }
 
 .header-links {
     a {
       color: white;
       text-decoration: none;
-      padding-right: 25px;
+      // padding-right: 25px;
       font-size: 23px;
       position: relative;
   

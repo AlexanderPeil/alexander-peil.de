@@ -188,3 +188,14 @@ form {
     top: -350px;
     transform: scaleY(-1) rotate(-90deg);
 }
+
+
+@media(max-width: 1400px) {
+    form {
+
+        input,
+        textarea {
+            width: 500px;
+        }
+    }
+}

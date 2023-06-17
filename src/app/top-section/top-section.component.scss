@@ -31,7 +31,7 @@
         transform: rotate(-90deg);
         font-size: 66px;
         font-weight: 400;
-        line-height: 120%;
+        line-height: 77px;
         margin: 0;
     }
 }
@@ -41,14 +41,14 @@
     h1 {
         font-size: 86px;
         font-weight: 700;
-        line-height: 120%;
+        line-height: 108px;
         margin: 0;
     }
 
     h2 {
         font-size: 56px;
         font-weight: 400;
-        line-height: 120%;
+        line-height: 70px;
         color: #ff4747;
         margin: 0;
     }
@@ -78,7 +78,7 @@
         height: 58px;
         font-size: 23px;
         font-weight: 400;
-        line-height: 120%;
+        line-height: 28px;
         margin-top: 30px;
         transition: all 125ms ease-in-out;
 
@@ -231,3 +231,54 @@
           }
     }
 }
+
+@media(max-width: 1600px) {
+    .rotate {
+        font-size: 50px !important;
+        padding-top: 10px;
+    }
+
+    .name-job {
+
+        h1 {
+            font-size: 70px;
+            margin-bottom: -25px;
+        }
+
+        h2 {
+            font-size: 45px;
+        }
+    }
+}
+
+@media(max-width: 1400px) {
+    .rotate {
+        font-size: 32px !important;
+        line-height: 38px;
+        padding: unset;
+    }
+
+    .name-job {
+
+        h1 {
+            font-size: 45px;
+            line-height: 54px;
+            margin-bottom: -5px;
+        }
+
+        h2 {
+            font-size: 29px;
+            line-height: 35px;
+        }
+    }
+
+    .lets-talk {
+
+        button {
+            width: 133px;
+            height: 49px;
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+} 

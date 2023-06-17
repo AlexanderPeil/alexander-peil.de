@@ -8,10 +8,11 @@ body {
     justify-content: space-between;
     color: white;
     padding-top: 10vh;
-    padding-left: 100px;
+    // padding-left: 100px;
+    margin-left: 100px;
     z-index: 3;
     position: relative;
-    width: 100%;
+    // width: 100%;
     
 
     h1 {
@@ -64,10 +65,11 @@ body {
     display: flex;
     align-items: center;
     margin-top: 100px;
+    // margin-right: 100px;
     position: relative;
 
     .circle {
-        position: absolute;
+        // position: absolute;
         right: 400px;
         width: 453px;
         height: 453px;
@@ -91,5 +93,5 @@ body {
 
 .shadow {
     position: absolute;
-    right: -325px;
+    // right: -325px;
 }

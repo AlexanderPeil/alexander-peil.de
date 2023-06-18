@@ -156,6 +156,7 @@ form {
 .email-required {
     top: 180px;
 }
+
 .message-required {
     top: 440px;
 }
@@ -191,6 +192,23 @@ form {
 
 
 @media(max-width: 1400px) {
+
+    h1 {
+        font-size: 75px !important;
+    }
+
+    .contact-left {
+        width: 380px;
+
+        h2 {
+            font-size: 23px !important;
+        }
+
+        p {
+            width: 380px;
+        }
+    }
+
     form {
 
         input,
@@ -201,7 +219,60 @@ form {
 }
 
 @media(max-width: 1000px) {
+
+    .contact-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-top {
+        width: 100%;
+        justify-content: center;
+        position: relative;
+
+        .contact-red-line {
+            position: absolute;
+            left: 0;
+            margin-right: 25px !important;
+        }
+
+        h1 {
+            padding-right: 220px;
+            margin: 0;
+        }
+    }
+
     .contact-content {
         flex-direction: column;
+    }
+
+    .contact-left {
+        margin: 0;
+        align-items: center;
+        width: 500px;
+        height: unset;
+
+        h2 {
+            padding-right: 230px;
+        }
+
+        p {
+            width: unset;
+        }
+
+        span {
+            padding-right: 195px;
+            width: unset;
+        }
+    }
+
+    form {
+        padding-top: 40px;
+        margin: 0;
+
+        input, textarea {
+            width: 500px;
+        }
     }
 }

@@ -199,3 +199,9 @@ form {
         }
     }
 }
+
+@media(max-width: 1000px) {
+    .contact-content {
+        flex-direction: column;
+    }
+}

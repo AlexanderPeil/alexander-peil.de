@@ -14,8 +14,21 @@
             <a class="skills-link" href="#mySkills" [ngStyle]="{'padding-right': '25px'}">Skills</a>
             <a class="portfolio-link" href="#portfolio">Portfolio</a>
         </div>
-        <div class="mobile-menu">
-            <img src="../../assets/img/burger-menu.png">
-        </div>
+        <!-- <img (click)="toggleMobileMenu()" class="toggle-mobile-menu" [class.hide]="hideButton" src="../../assets/img/burger-menu.png">
+        <app-mobile-menu *ngIf="mobileMenu">
+        </app-mobile-menu> -->
+        <button mat-button (click)="toggleMenu()">
+            <ng-container *ngIf="!mobileMenu; else closeIcon">
+                <mat-icon class="open-mobile-menu">menu</mat-icon>
+            </ng-container>
+            <ng-template #closeIcon>
+                <mat-icon>close</mat-icon>
+                <a class="about-me-link" href="#aboutMe" [ngStyle]="{'padding-right': '25px'}">About me</a>
+                <a class="skills-link" href="#mySkills" [ngStyle]="{'padding-right': '25px'}">Skills</a>
+                <a class="portfolio-link" href="#portfolio">Portfolio</a>
+            </ng-template>
+        </button>
+
+
     </div>
 </nav>

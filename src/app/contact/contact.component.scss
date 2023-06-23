@@ -85,8 +85,9 @@ form {
 
         &:hover {
             background-color: #FF4747;
-            width: 270px;
-            height: 75px;
+                transform: scale(1.2);
+            // width: 270px;
+            // height: 75px;
         }
     }
 

@@ -72,9 +72,26 @@ nav {
   }
 }
 
-.mobile-menu {
+.toggle-mobile-menu {
   display: none;
 }
+
+.nav-mobile-menu {
+  background-color: #141d2f;
+
+}
+
+.nav-mobile-menu-item {
+  color: #fa7902;
+}
+
+.open-mobile-menu {
+  color: white;
+}
+
+// .hide {
+//   display: none !important;
+// }
 
 
 @media(max-width: 1000px) {
@@ -83,8 +100,8 @@ nav {
     display: none;
   }
 
-  .mobile-menu {
+  .toggle-mobile-menu {
     display: block;
     cursor: pointer;
-  }
+  }  
 }

@@ -22,6 +22,7 @@ export class HeaderComponent {
 
   toggleMenu() {
     this.mobileMenu = !this.mobileMenu;
+    
   }
 
   scrollToTop() {

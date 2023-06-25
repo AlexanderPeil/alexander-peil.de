@@ -133,3 +133,20 @@ body {
         display: none;
     }
 }
+
+@media(max-width: 600px) {
+    h1 {
+        
+    }
+
+    .about-me-text {
+        width: unset;
+        // padding-left: 5%;
+        // padding-right: 5%;
+    }
+
+    .main-content {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}

@@ -355,7 +355,7 @@
     .bottom-content {
 
         .bg-shadow {
-        top: -310px !important;
+            top: -310px !important;
         }
 
         .bottom-links {
@@ -373,4 +373,37 @@
             left: 0;
         }
     }
+}
+
+@media(max-width: 600px) {
+    .right-section {
+        padding-right: 5%;
+    }
+
+    .name-job {
+
+        h1 {
+            font-size: 35px;
+        }
+
+        h2 {
+            font-size: 25px;
+        }
+    }
+
+    .rotate {
+        font-size: 28px !important;
+    }
+
+    .red-line {
+        width: 60px;
+    }
+
+    .bg-img {
+        width: 100% !important;
+      }
+    
+      .my-img {
+        width: 100% !important;
+      }
 }

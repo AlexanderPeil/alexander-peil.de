@@ -194,3 +194,13 @@
         }
     }
 }
+
+@media(max-width: 600px) {
+    .my-skills-text {
+
+        p {
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+    }
+}

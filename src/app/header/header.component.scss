@@ -137,3 +137,25 @@ nav {
     cursor: pointer;
   }
 }
+
+@media(max-width: 600px) {
+  .header {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .header-name {
+
+    span {
+      font-size: 30px;
+    }
+  }
+
+  .mobile-menu-btn {
+    font-size: 35px;
+  }
+
+  nav {
+    width: 100vw;
+  }
+}

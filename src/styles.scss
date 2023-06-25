@@ -1,17 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body {
-    height: 100%; 
+html,
+body {
+    height: 100%;
     // width: 100vw;
 }
-body { 
-    margin: 0; 
+
+body {
+    margin: 0;
     font-family: Poppins, sans-serif !important;
     background-color: #141d2f;
 }
 
 html {
-    scroll-behavior: smooth!important;
+    scroll-behavior: smooth !important;
     overflow-x: hidden;
     box-sizing: border-box;
 }
@@ -28,9 +30,20 @@ html {
     background: #101826;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 .hide {
     display: none !important;
-  }
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
+}

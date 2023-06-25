@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Renderer2  } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,23 +6,31 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  // @Input() mobileMenu: boolean = false;
-  // @Input() hideButton: boolean = false;
-  // @Input() hideMobileMenu: boolean = true;
-  // @Output() openMobileMenu: EventEmitter<void> = new EventEmitter<void>();
-
-  // toggleMobileMenu() {
-  //   this.openMobileMenu.emit();
-  //   this.hideMobileMenu = false;
-  //   this.mobileMenu = true;
-  //   this.hideButton = true;
-  // }
+  constructor(private renderer: Renderer2) {}
 
   mobileMenu: boolean = false;
+  overflowHidden: boolean = false;
 
-  toggleMenu() {
+  toggleMenu(): void {
     this.mobileMenu = !this.mobileMenu;
-    
+    if (this.mobileMenu) {
+      this.addBodyClass('overflow-hidden');
+    } else {
+      this.removeBodyClass('overflow-hidden');
+    }
+  }
+
+  // closeMenu(): void {
+  //   this.mobileMenu = false;
+  //   this.overflowHidden = false;
+  // }
+
+  addBodyClass(className: string): void {
+    this.renderer.addClass(document.body, className);
+  }
+
+  removeBodyClass(className: string): void {
+    this.renderer.removeClass(document.body, className);
   }
 
   scrollToTop() {

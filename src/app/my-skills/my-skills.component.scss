@@ -4,7 +4,7 @@
     gap: 48px;
     color: white;
     padding-top: 27vh;
-    // width: 100vw;
+    width: 100vw;
     position: relative;
 
     p {
@@ -38,6 +38,8 @@
 }
 
 .my-skills-headline {
+    margin-left: auto;
+
     h1 {
         font-size: 90px;
         font-weight: 700;
@@ -51,8 +53,9 @@
     flex-wrap: wrap;
     gap: 54px;
     width: 721px;
-    margin-left: 100px;
+    padding-left: 100px;
     z-index: 0;
+    width: calc(60% - 50px);
 }
 
 .logo-container {
@@ -63,6 +66,7 @@
     margin-right: 50px;
     width: 88px;
     height: 100px;
+
 
 
     img {
@@ -116,28 +120,31 @@
 
         &:hover {
             cursor: pointer;
-            animation-name: bounce;
-            -moz-animation-name: bounce;
         }
     }
 }
 
 .my-skills-text {
+    position: relative;
     display: flex;
     gap: 50px;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
     width: 571px;
+    padding-right: 100px;
 }
 
 .my-skills-line {
+    position: absolute;
+    top: 50px;
+    right: 0;
     height: 5px;
-    width: 100px;
+    width: 75px;
     background-color: #ff4747;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    margin-top: 100px;
+    // margin-top: 100px;
 }
 
 .my-skills-shadow {
@@ -152,13 +159,10 @@
     .my-skills-headline {
         display: flex;
         align-items: center;
-        // justify-content: flex-end;
-        // width: 100vw;
 
         h1 {
             font-size: 45px !important;
             line-height: 54px;
-            margin-left: auto;
         }
 
         .my-skills-line-resp {

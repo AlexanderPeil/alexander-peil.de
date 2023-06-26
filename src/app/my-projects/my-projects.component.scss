@@ -78,6 +78,10 @@ h1 {
     // }
 }
 
+.project-content-reverse {
+    flex-direction: row-reverse;
+}
+
 .projects-img {
     height: 460px;
     z-index: 0;

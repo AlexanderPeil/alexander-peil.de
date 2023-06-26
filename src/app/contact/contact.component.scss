@@ -277,3 +277,12 @@ form {
         }
     }
 }
+
+@media(max-width: 600px) {
+    form {
+
+        input, textarea {
+            width: 360px;
+        }
+    }
+}

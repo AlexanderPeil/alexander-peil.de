@@ -10,7 +10,7 @@
         background-color: #ff4747;
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
-        margin-right: 35px;
+        margin-right: 20px;
     }
 
     h1 {
@@ -85,7 +85,7 @@ form {
 
         &:hover {
             background-color: #FF4747;
-                transform: scale(1.2);
+            transform: scale(1.2);
             // width: 270px;
             // height: 75px;
         }
@@ -234,12 +234,16 @@ form {
 
         .contact-red-line {
             position: absolute;
-            left: 0;
-            margin-right: 25px !important;
+            right: 0;
+            margin: unset;
+            border-top-right-radius: unset;
+            border-bottom-right-radius: unset;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
         }
 
         h1 {
-            padding-right: 220px;
+            padding-right: 190px;
             margin: 0;
         }
     }
@@ -272,17 +276,48 @@ form {
         padding-top: 40px;
         margin: 0;
 
-        input, textarea {
+        input,
+        textarea {
             width: 500px;
         }
     }
 }
 
-@media(max-width: 600px) {
-    form {
 
-        input, textarea {
-            width: 360px;
+@media(max-width: 600px) {
+    .contact-top {
+        width: 100vw;
+
+        .contact-red-line {
+            width: 60px;
+        }
+
+        h1 {
+            padding: unset;
+            font-size: 45px !important;
+            line-height: 54px !important;
+            margin-right: auto;
+            padding-left: 5%;
+        }
+    }
+
+    .contact-left {
+        width: unset;
+        padding: 0 5%;
+
+        h2 {
+            padding: unset;
+            line-height: 28px;
+            margin-right: auto;
+        }
+    }
+
+    form {
+        padding: 5%;
+
+        input,
+        textarea {
+            width: 100%;
         }
     }
 }

@@ -211,5 +211,10 @@
 
     .my-skills-logos {
         padding: unset;
+        column-gap: 100px;
+
+        .logo-container {
+            margin: unset;
+        }
     }
 }

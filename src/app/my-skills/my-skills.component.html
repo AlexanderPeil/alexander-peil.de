@@ -2,7 +2,7 @@
     <img class="my-skills-shadow" src="../../assets/img/my-skills-shadow.png">
     <div class="my-skills-logos" data-aos="fade-right">
         <div class="logo-container" *ngFor="let logo of logosContent">
-            <img [src]="logo.logos">
+            <img class="skill-logos" [src]="logo.logos">
             <p>{{ logo.description }}</p>
         </div>
     </div>

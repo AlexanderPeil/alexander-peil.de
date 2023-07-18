@@ -84,10 +84,12 @@ form {
         transition: all 125ms ease-in-out;
 
         &:hover {
-            background-color: #FF4747;
-            transform: scale(1.2);
-            // width: 270px;
-            // height: 75px;
+            // font-weight: 700 !important;
+            letter-spacing: 3px;
+            background: #ff4747;
+            -webkit-box-shadow: 0px 5px 40px -10px rgba(255, 71, 71,0.57);
+            -moz-box-shadow: 0px 5px 40px -10px rgba(255, 71, 71,0.57);
+            transition: all 0.3s ease 0s;
         }
     }
 

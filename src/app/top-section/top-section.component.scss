@@ -8,9 +8,9 @@
     position: relative;
 
     .my-img {
-        height: 705px;
-        width: 530px;
-        object-fit: cover;
+        height: 800px;
+        // width: 530px;
+        // object-fit: contain;
         padding-left: 100px;
     }
 
@@ -84,8 +84,10 @@
         transition: all 125ms ease-in-out;
 
         &:hover {
-            background-color: #ff4747;
-            transform: scale(1.2);
+            text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+            -webkit-box-shadow: 0px 5px 40px -10px rgba(250, 121, 2,0.57);
+            -moz-box-shadow: 0px 5px 40px -10px rgba(250, 121, 2.57);
+            transition: all 0.4s ease 0s;
         }
     }
 }
@@ -93,12 +95,13 @@
 .bottom-content {
     display: flex;
     position: relative;
+    bottom: 70px;
 }
 
 .bg-shadow {
     position: absolute;
     width: 100vw;
-    top: -280px;
+    top: -345px;
 }
 
 .bottom-links {
@@ -225,12 +228,12 @@
         line-height: 28px;
         color: white;
         text-decoration: none;
-        transition: all 225ms ease-in-out;
+        transition: all 125ms ease-in-out;
 
         &:hover {
             color: #fa7902;
             font-size: 30px;
-            transition: all 225ms ease-in-out;
+            transition: all 125ms ease-in-out;
         }
     }
 }

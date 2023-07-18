@@ -82,8 +82,8 @@ body {
     }
 
     img {
-        height: 453px;
-        width: 453px;
+        height: 100%;
+        width: 100%;
         border-radius: 100%;
         object-fit: cover;
     }
@@ -91,7 +91,7 @@ body {
 
 .shadow {
     position: absolute;
-    // right: -325px;
+    right: -480px;
 }
 
 @media(max-width: 1600px) {

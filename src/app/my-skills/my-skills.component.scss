@@ -27,7 +27,7 @@
         font-weight: 400;
         line-height: 28px;
         border: none;
-        transition: all 225ms ease-in-out;
+        transition: all 125ms ease-in-out;
 
         &:hover {
             background: #ff4747;
@@ -35,7 +35,7 @@
             -webkit-box-shadow: 0px 5px 40px -10px rgba(255, 71, 71,0.57);
             -moz-box-shadow: 0px 5px 40px -10px rgba(255, 71, 71,0.57);
             box-shadow: 5px 40px -10px rgba(255, 71, 71,0.57);
-            transition: all 0.4s ease 0s;
+            transition: all 125ms ease 0s;
         }
     }
 }
@@ -71,7 +71,7 @@
     height: 100px;
 
     .skill-logos {
-        box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+        // box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
         text-transform: uppercase;
         -webkit-animation-duration: 1s;
         animation-duration: 1s;
@@ -156,6 +156,10 @@
 
 @media(max-width: 1000px) {
 
+    .my-skills {
+        padding-top: 15vh;
+    }
+
     .my-skills-headline {
         display: flex;
         align-items: center;
@@ -172,6 +176,12 @@
             border-top-left-radius: 15px;
             border-bottom-left-radius: 15px;
         }
+    }
+
+    .my-skills-shadow {
+        opacity: 0.8;
+        top: -110px;
+        left: -350px;
     }
 
     .my-skills {

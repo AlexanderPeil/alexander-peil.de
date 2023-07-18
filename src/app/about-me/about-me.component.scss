@@ -47,10 +47,10 @@ body {
 .personal {
     display: flex;
     align-items: center;
-    transition: 225ms all;
+    transition: 125ms all;
 
     img {
-        transition: all 225ms ease-in-out;
+        transition: all 125ms ease-in-out;
         cursor: pointer;
 
         &:hover {
@@ -129,8 +129,18 @@ body {
         justify-content: center;
     }
 
+    .about-me-container {
+        position: relative;
+        z-index: 1;
+    }
+
     .about-me-img {
         display: none;
+    }
+
+    .shadow {
+        right: -545px;
+        opacity: 0.8;
     }
 }
 
@@ -141,8 +151,6 @@ body {
 
     .about-me-text {
         width: unset;
-        // padding-left: 5%;
-        // padding-right: 5%;
     }
 
     .main-content {

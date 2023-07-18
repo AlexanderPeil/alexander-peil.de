@@ -89,7 +89,7 @@ form {
             background: #ff4747;
             -webkit-box-shadow: 0px 5px 40px -10px rgba(255, 71, 71,0.57);
             -moz-box-shadow: 0px 5px 40px -10px rgba(255, 71, 71,0.57);
-            transition: all 0.3s ease 0s;
+            transition: all 125ms ease 0s;
         }
     }
 
@@ -233,6 +233,7 @@ form {
         width: 100%;
         justify-content: center;
         position: relative;
+        padding-top: 15vh;
 
         .contact-red-line {
             position: absolute;
@@ -252,6 +253,7 @@ form {
 
     .contact-content {
         flex-direction: column;
+        margin-bottom: 25px;
     }
 
     .contact-left {
@@ -282,6 +284,10 @@ form {
         textarea {
             width: 500px;
         }
+    }
+
+    .contact-shadow {
+        opacity: 0.6;
     }
 }
 

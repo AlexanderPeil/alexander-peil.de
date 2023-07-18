@@ -11,7 +11,7 @@
         height: 800px;
         // width: 530px;
         // object-fit: contain;
-        padding-left: 100px;
+        padding-left: 40px;
     }
 
     .bg-img {
@@ -19,6 +19,7 @@
         height: 671px;
         position: absolute;
         top: 50px;
+        left: -32px;
         z-index: -1;
     }
 }
@@ -85,9 +86,9 @@
 
         &:hover {
             text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-            -webkit-box-shadow: 0px 5px 40px -10px rgba(250, 121, 2,0.57);
+            -webkit-box-shadow: 0px 5px 40px -10px rgba(250, 121, 2, 0.57);
             -moz-box-shadow: 0px 5px 40px -10px rgba(250, 121, 2.57);
-            transition: all 0.4s ease 0s;
+            transition: all 125ms ease 0s;
         }
     }
 }
@@ -257,7 +258,13 @@
     }
 
     .bg-shadow {
-        top: -240px;
+        top: -323px;
+    }
+}
+
+@media(max-width: 1500px) {
+    .bg-shadow {
+        top: -310px;
     }
 }
 
@@ -293,29 +300,46 @@
     }
 
     .bg-shadow {
-        top: -200px;
+        top: -300px;
+    }
+}
+
+@media(max-width: 1300px) {
+    .bg-shadow {
+        top: -290px;
     }
 }
 
 @media(max-width: 1200px) {
 
     .my-img {
-        width: 450px !important;
-        height: 500px !important;
-        padding-top: 100px;
+        // width: 450px !important;
+        height: 680px !important;
+        // padding-top: 100px;
+    }
+
+    .bg-img {
+        // top: 105px !important;
+        left: -70px !important;
     }
 
     .bg-shadow {
-        top: -180px !important;
+        top: -245px !important;
     }
 }
 
-@media(max-width: 1000px) {
+@media(max-width: 1100px) {
+    .my-img {
+        height: 650px !important;
+    }
 
-    // .main-mobile {
-    //     display: flex;
-    //     flex-direction: column;
-    // }
+    .bg-shadow {
+        top: -230px !important;
+    }
+
+}
+
+@media(max-width: 1000px) {
 
     .main {
         flex-direction: column;
@@ -327,20 +351,22 @@
         .bg-img {
             width: 650px;
             height: 500px;
-            top: 65px;
+            top: 35px;
+            left: unset !important;
         }
 
         .my-img {
             padding-left: 0 !important;
-            padding-top: 55px;
-            width: 400px !important;
-            height: 440px !important;
+            padding-top: 30px;
+            // width: 400px !important;
+            height: 600px !important;
         }
     }
 
     .right-section {
         margin: unset;
-        padding-top: 20px;
+        // padding-top: 20px;
+        bottom: 160px;
 
         .my-name {
             margin: unset;
@@ -358,11 +384,14 @@
     .bottom-content {
 
         .bg-shadow {
-            top: -310px !important;
+            top: -365px !important;
+            height: 400px;
         }
 
         .bottom-links {
             padding-top: 40px;
+            position: absolute;
+            bottom: 0;
         }
     }
 
@@ -404,9 +433,9 @@
 
     .bg-img {
         width: 100% !important;
-      }
-    
-      .my-img {
+    }
+
+    .my-img {
         width: 100% !important;
-      }
+    }
 }

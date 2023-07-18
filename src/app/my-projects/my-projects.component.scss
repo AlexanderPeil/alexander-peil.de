@@ -62,20 +62,6 @@ h1 {
     align-items: center;
     justify-content: space-around;
     margin: 50px 100px;
-    // position: relative;
-
-    // .my-projects-shadow-top {
-    //     position: absolute;
-    //     top: -120px;
-    //     left: -600px;
-    //     transform: rotate(45deg);
-    // }
-
-    // .my-projects-shadow-bottom {
-    //     position: absolute;
-    //     right: -560px;
-    //     transform: rotate(45deg);
-    // }
 }
 
 .project-content-reverse {
@@ -209,7 +195,7 @@ h1 {
     .my-projects-top {
         position: relative;
         justify-content: center;
-        // margin-right: auto;
+        padding-top: 15vh;
 
         .headline-mobile {
             padding-right: 50px;
@@ -234,6 +220,8 @@ h1 {
     .project-content {
         flex-direction: column;
         align-items: center;
+        margin-top: unset;
+        margin-bottom: unset;
 
         img {
             height: 300px;
@@ -245,7 +233,15 @@ h1 {
     }
 
     .my-projects-shadow-top {
-        display: none;
+        opacity: 0.8;
+        top: -108px;
+        left: -575px;
+    }
+
+    .my-projects-shadow-bottom {
+        opacity: 0.8;
+        bottom: 72px;
+        right: -565px;
     }
 }
 

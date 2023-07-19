@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+declare var AOS: any;
 
 
 @Component({
@@ -8,7 +9,11 @@ import { Component } from '@angular/core';
 })
 
 
-export class AboutMeComponent {
+export class AboutMeComponent implements AfterViewInit {
 
+  ngAfterViewInit(): void {
+    AOS.init();
+    AOS.refresh();
+  }
 
 }

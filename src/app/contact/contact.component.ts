@@ -1,11 +1,13 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+declare var AOS: any;
+
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent {
+export class ContactComponent implements AfterViewInit {
   @ViewChild('form') form!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
   @ViewChild('emailField') emailField!: ElementRef;
@@ -15,6 +17,12 @@ export class ContactComponent {
   displayEnterName = false;
   displayEnterEmail = false;
   displayEnterMessage = false;
+
+
+  ngAfterViewInit(): void {
+    AOS.init();
+    AOS.refresh();
+  }
 
 
   async sendMail() {

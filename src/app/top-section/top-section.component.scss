@@ -16,7 +16,7 @@
         height: 671px;
         position: absolute;
         top: 50px;
-        left: -32px;
+        left: -11px;
         z-index: -1;
     }
 }
@@ -348,6 +348,7 @@
             height: 500px;
             top: 35px;
             left: unset !important;
+            opacity: 0.8;
         }
 
         .my-img {
@@ -425,10 +426,6 @@
     }
 
     .bg-img {
-        width: 100% !important;
-    }
-
-    .my-img {
         width: 100% !important;
     }
 }

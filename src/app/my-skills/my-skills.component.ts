@@ -1,11 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
+declare var AOS: any;
+
 
 @Component({
   selector: 'app-my-skills',
   templateUrl: './my-skills.component.html',
   styleUrls: ['./my-skills.component.scss']
 })
-export class MySkillsComponent {
+export class MySkillsComponent implements AfterViewInit {
+
+  ngAfterViewInit(): void {
+    AOS.init();
+    AOS.refresh();
+  }
+
+  
   public logosContent: {logos: string, description: string}[] = [
     { logos: '../../assets/img/angular.png', description: 'Angular'},
     { logos: '../../assets/img/ts.png', description: 'TypeSript'},

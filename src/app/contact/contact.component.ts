@@ -20,10 +20,11 @@ export class ContactComponent implements AfterViewInit {
 
 
   ngAfterViewInit(): void {
-    AOS.init();
-    AOS.refresh();
+    setTimeout(() => {
+      AOS.init();
+      AOS.refreshHard();
+    }, 500);
   }
-
 
   async sendMail() {
     let nameField = this.nameField.nativeElement;

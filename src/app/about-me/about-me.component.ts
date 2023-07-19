@@ -12,8 +12,10 @@ declare var AOS: any;
 export class AboutMeComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
-    AOS.init();
-    AOS.refresh();
+    setTimeout(() => {
+      AOS.init();
+      AOS.refreshHard();
+    }, 500);
   }
 
 }

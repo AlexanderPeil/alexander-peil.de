@@ -10,8 +10,10 @@ declare var AOS: any;
 export class MySkillsComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
-    AOS.init();
-    AOS.refresh();
+    setTimeout(() => {
+      AOS.init();
+      AOS.refreshHard();
+    }, 1000);
   }
 
   

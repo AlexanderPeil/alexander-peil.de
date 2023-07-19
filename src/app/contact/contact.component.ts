@@ -17,6 +17,39 @@ export class ContactComponent {
   displayEnterMessage = false;
 
 
+  async sendMail() {
+    let nameField = this.nameField.nativeElement;
+    let emailField = this.emailField.nativeElement;
+    let messageField = this.messageField.nativeElement;
+    let sendButton = this.sendButton.nativeElement;
+
+    nameField.disabled = true;
+    emailField.disabled = true;
+    messageField.disabled = true;
+    sendButton.disabled = true;
+
+    let fd = new FormData();
+    fd.append('name', nameField.value);
+    fd.append('email', emailField.value);
+    fd.append('message', messageField.value);
+    await fetch('https://alexander-peil.de/send_mail/send_mail.php',
+      {
+        method: 'POST',
+        body: fd
+      }      
+    );
+    nameField.value = '';
+    emailField.value = '';
+    messageField.value = '';
+
+      //Info dass Nachricht gesendet wurde
+    nameField.disabled = false;
+    emailField.disabled = false;
+    messageField.disabled = false;
+    sendButton.disabled = false;
+  }
+
+
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -49,38 +82,5 @@ export class ContactComponent {
 
   hideEnterMessage() {
     this.displayEnterMessage = false;
-  }
-
-
-  async sendMail() {
-    let nameField = this.nameField.nativeElement;
-    let emailField = this.emailField.nativeElement;
-    let messageField = this.messageField.nativeElement;
-    let sendButton = this.sendButton.nativeElement;
-
-    nameField.disabled = true;
-    emailField.disabled = true;
-    messageField.disabled = true;
-    sendButton.disabled = true;
-    //Info dass gesendet wird
-    let fd = new FormData();
-    fd.append('name', nameField.value);
-    fd.append('email', emailField.value);
-    fd.append('message', messageField.value);
-    await fetch('https://w01e05ed.kasserver.com/send_mail/send_mail.php',
-      {
-        method: 'POST',
-        body: fd
-      }      
-    );
-    nameField.value = '';
-    emailField.value = '';
-    messageField.value = '';
-
-      //Info dass Nachricht gesendet wurde
-    nameField.disabled = false;
-    emailField.disabled = false;
-    messageField.disabled = false;
-    sendButton.disabled = false;
   }
 }

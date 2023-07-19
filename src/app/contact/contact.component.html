@@ -12,15 +12,15 @@
                 projects with my work.</p>
             <span>Need a Frontend developer? <b>Contact me!</b></span>
         </div>
-        <form data-aos="flip-right" (submit)="sendMail()" #form>
-            <input required type="text" placeholder="Your name" name="name" (focus)="showEnterName()" (blur)="hideEntername()">
+        <form data-aos="flip-right" (submit)="sendMail()" ngNativeValidate #form>
+            <input required type="text" placeholder="Your name" name="name" (focus)="showEnterName()" (blur)="hideEntername()" #nameField>
             <span class="name-required" [hidden]="!displayEnterName">Please enter your name</span>
-            <input required type="email" placeholder="Your email" name="email" (focus)="showEnterEmail()" (blur)="hideEnterEmail()">
+            <input required type="email" placeholder="Your email" name="email" (focus)="showEnterEmail()" (blur)="hideEnterEmail()" #email>
             <span class="email-required" [hidden]="!displayEnterEmail">Please enter your email</span>
             <textarea required type="text" cols="30" rows="10" name="message" placeholder="Your message" (focus)="showEnterMessage()"
-                (blur)="hideEnterMessage()"></textarea>
+                (blur)="hideEnterMessage()" #messageField></textarea>
             <span class="message-required" [hidden]="!displayEnterMessage">Please enter your message</span>
-            <button>Send message</button>
+            <button #sendButton>Send message</button>
             <img (click)="scrollToTop()" src="../../assets/img/arrow-up.png">
         </form>
     </div>

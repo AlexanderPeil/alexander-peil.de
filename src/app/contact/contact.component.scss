@@ -48,6 +48,7 @@ form {
         cursor: pointer;
         box-sizing: border-box;
         width: 700px;
+        color: white;
 
         &:hover {
             border: 1px solid #cf680a;
@@ -55,7 +56,6 @@ form {
 
         &:focus-visible {
             outline: none;
-            color: white;
             border: 1px solid #cf680a;
         }
 

@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -6,7 +6,12 @@ import { Component, ViewChild } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-  @ViewChild('#form') form: any;
+  @ViewChild('form') form!: ElementRef;
+  @ViewChild('nameField') nameField!: ElementRef;
+  @ViewChild('emailField') emailField!: ElementRef;
+  @ViewChild('messageField') messageField!: ElementRef;
+  @ViewChild('sendButton') sendButton!: ElementRef;
+  
   displayEnterName = false;
   displayEnterEmail = false;
   displayEnterMessage = false;
@@ -47,8 +52,31 @@ export class ContactComponent {
   }
 
 
-  sendMail() {
-    // action="https://w01e05ed.kasserver.com/send_mail/send_mail.php"
+  async sendMail() {
+    let nameField = this.nameField.nativeElement;
+    let emailField = this.emailField.nativeElement;
+    let messageField = this.messageField.nativeElement;
+    let sendButton = this.sendButton.nativeElement;
 
+    nameField.disabled = true;
+    emailField.disabled = true;
+    messageField.disabled = true;
+    sendButton.disabled = true;
+    //Info dass gesendet wird
+    let fd = new FormData();
+    fd.append('name', nameField.value);
+    fd.append('email', emailField.value);
+    fd.append('message', messageField.value);
+    await fetch('https://w01e05ed.kasserver.com/send_mail/send_mail.php',
+      {
+        method: 'POST',
+        body: fd
+      }      
+    );
+      //Info dass Nachricht gesendet wurde
+    nameField.disabled = false;
+    emailField.disabled = false;
+    messageField.disabled = false;
+    sendButton.disabled = false;
   }
 }

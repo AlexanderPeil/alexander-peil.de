@@ -1,5 +1,4 @@
 <div class="contact-mobile">
-    <!-- <div class="contact-red-line"></div> -->
     <div class="contact-top" id="contact">
         <div class="contact-red-line"></div>
         <h1>Contact</h1>
@@ -13,12 +12,12 @@
                 projects with my work.</p>
             <span>Need a Frontend developer? <b>Contact me!</b></span>
         </div>
-        <form data-aos="flip-right" onsubmit="sendMail()" action="" method="post">
-            <input required type="text" placeholder="Your name" (focus)="showEnterName()" (blur)="hideEntername()">
+        <form data-aos="flip-right" (submit)="sendMail()" #form>
+            <input required type="text" placeholder="Your name" name="name" (focus)="showEnterName()" (blur)="hideEntername()">
             <span class="name-required" [hidden]="!displayEnterName">Please enter your name</span>
-            <input required type="email" placeholder="Your email" (focus)="showEnterEmail()" (blur)="hideEnterEmail()">
+            <input required type="email" placeholder="Your email" name="email" (focus)="showEnterEmail()" (blur)="hideEnterEmail()">
             <span class="email-required" [hidden]="!displayEnterEmail">Please enter your email</span>
-            <textarea required type="text" cols="30" rows="10" placeholder="Your message" (focus)="showEnterMessage()"
+            <textarea required type="text" cols="30" rows="10" name="message" placeholder="Your message" (focus)="showEnterMessage()"
                 (blur)="hideEnterMessage()"></textarea>
             <span class="message-required" [hidden]="!displayEnterMessage">Please enter your message</span>
             <button>Send message</button>

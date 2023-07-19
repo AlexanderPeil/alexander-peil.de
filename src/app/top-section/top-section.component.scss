@@ -4,13 +4,10 @@
     color: white;
     padding-right: 100px;
     margin-top: 140px;
-    // z-index: 2;
     position: relative;
 
     .my-img {
         height: 800px;
-        // width: 530px;
-        // object-fit: contain;
         padding-left: 40px;
     }
 
@@ -66,7 +63,6 @@
 }
 
 .lets-talk {
-    // padding-top: 50px;
 
     button {
         color: white;
@@ -221,7 +217,6 @@
 
 .email {
     position: relative;
-    width: 200px;
 
     a {
         font-size: 23px;
@@ -229,15 +224,18 @@
         line-height: 28px;
         color: white;
         text-decoration: none;
-        transition: all 125ms ease-in-out;
+        transition: transform 125ms ease-in-out;
 
         &:hover {
-            color: #fa7902;
-            font-size: 30px;
-            transition: all 125ms ease-in-out;
+            color: #fff;
+            text-shadow: 0 0 5px #FA7902,
+                0 0 25px #FA7902,
+                0 0 50px #FA7902,
+                0 0 100px #FA7902;
         }
     }
 }
+
 
 @media(max-width: 1600px) {
     .rotate {
@@ -313,13 +311,10 @@
 @media(max-width: 1200px) {
 
     .my-img {
-        // width: 450px !important;
         height: 680px !important;
-        // padding-top: 100px;
     }
 
     .bg-img {
-        // top: 105px !important;
         left: -70px !important;
     }
 
@@ -358,14 +353,12 @@
         .my-img {
             padding-left: 0 !important;
             padding-top: 30px;
-            // width: 400px !important;
             height: 600px !important;
         }
     }
 
     .right-section {
         margin: unset;
-        // padding-top: 20px;
         bottom: 160px;
 
         .my-name {

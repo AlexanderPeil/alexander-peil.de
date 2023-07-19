@@ -73,6 +73,10 @@ export class ContactComponent {
         body: fd
       }      
     );
+    nameField.value = '';
+    emailField.value = '';
+    messageField.value = '';
+
       //Info dass Nachricht gesendet wurde
     nameField.disabled = false;
     emailField.disabled = false;

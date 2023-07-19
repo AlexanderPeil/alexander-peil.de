@@ -15,7 +15,7 @@
         <form data-aos="flip-right" (submit)="sendMail()" ngNativeValidate #form>
             <input required type="text" placeholder="Your name" name="name" (focus)="showEnterName()" (blur)="hideEntername()" #nameField>
             <span class="name-required" [hidden]="!displayEnterName">Please enter your name</span>
-            <input required type="email" placeholder="Your email" name="email" (focus)="showEnterEmail()" (blur)="hideEnterEmail()" #email>
+            <input required type="email" placeholder="Your email" name="email" (focus)="showEnterEmail()" (blur)="hideEnterEmail()" #emailField>
             <span class="email-required" [hidden]="!displayEnterEmail">Please enter your email</span>
             <textarea required type="text" cols="30" rows="10" name="message" placeholder="Your message" (focus)="showEnterMessage()"
                 (blur)="hideEnterMessage()" #messageField></textarea>

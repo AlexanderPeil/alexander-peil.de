@@ -288,6 +288,18 @@ form {
     .contact-shadow {
         opacity: 0.6;
     }
+
+    .name-required {
+        top: 110px;
+    }
+    
+    .email-required {
+        top: 220px;
+    }
+    
+    .message-required {
+        top: 475px;
+    }
 }
 
 

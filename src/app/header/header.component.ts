@@ -1,4 +1,6 @@
-import { Component, Renderer2  } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+
 
 @Component({
   selector: 'app-header',
@@ -8,7 +10,7 @@ import { Component, Renderer2  } from '@angular/core';
 export class HeaderComponent {
 
 
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2, private viewportScroller: ViewportScroller) { }
 
 
   mobileMenu: boolean = false;
@@ -33,7 +35,12 @@ export class HeaderComponent {
   removeBodyClass(className: string): void {
     this.renderer.removeClass(document.body, className);
   }
-  
+
+
+  scrollToElement(elementId: string): void {
+    this.viewportScroller.scrollToAnchor(elementId);
+  }
+
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });

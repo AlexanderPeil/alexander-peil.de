@@ -2,7 +2,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-top: 30vh;
+    padding-top: 18rem;
     width: 100vw;
 }
 
@@ -194,7 +194,7 @@ h1 {
     .my-projects-top {
         position: relative;
         justify-content: center;
-        padding-top: 15vh;
+        padding-top: 15rem;
 
         .headline-mobile {
             padding-right: 50px;
@@ -245,6 +245,10 @@ h1 {
 }
 
 @media(max-width: 600px) {
+    .my-projects-top {
+        padding-top: 11rem;
+    }
+    
     .project-content {
         margin-left: unset;
         margin-right: unset;

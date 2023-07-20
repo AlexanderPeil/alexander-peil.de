@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-declare var AOS: any;
+import { Component } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
 
 
 @Component({
@@ -9,8 +9,11 @@ declare var AOS: any;
 })
 export class TopSectionComponent   {
 
-  // ngOnInit(): void {
-  //   AOS.init();
-  // }
+constructor(private viewportScroller: ViewportScroller) { }
+
+
+scrollToElement(elementId: string): void {
+  this.viewportScroller.scrollToAnchor(elementId);
+}
 
 }

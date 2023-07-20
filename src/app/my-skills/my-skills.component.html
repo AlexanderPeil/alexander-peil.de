@@ -1,4 +1,7 @@
 <div class="my-skills" id="mySkills">
+    <div class="mobile-button-container">
+        <button class="mobile-button" (click)="scrollToElement('contact')">Get in touch</button>
+    </div>
     <img class="my-skills-shadow" src="../../assets/img/my-skills-shadow.png">
     <div class="my-skills-logos" data-aos="fade-right">
         <div class="logo-container" *ngFor="let logo of logosContent">
@@ -7,14 +10,12 @@
         </div>
     </div>
     <div class="my-skills-text" data-aos="fade-left">
-        <div class="my-skills-headline"> 
-            <h1>My skills</h1>    
+        <div class="my-skills-headline">
+            <h1>My skills</h1>
             <div class="my-skills-line-resp"></div>
         </div>
         <p>I have grown my frontend developments skills that have allowed me to create different real projects.</p>
-        <a href="#contact">
-            <button>Get in touch</button>
-        </a>
+        <button class="desktop-button" (click)="scrollToElement('contact')">Get in touch</button>
         <div class="my-skills-line"></div>
     </div>
 </div>

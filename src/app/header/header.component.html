@@ -10,9 +10,9 @@
             </a>
         </div>
         <div class="header-links">
-            <a class="about-me-link" href="#aboutMe" [ngStyle]="{'padding-right': '25px'}">About me</a>
-            <a class="skills-link" href="#mySkills" [ngStyle]="{'padding-right': '25px'}">Skills</a>
-            <a class="portfolio-link" href="#portfolio">Portfolio</a>
+            <a class="about-me-link" [ngStyle]="{'padding-right': '25px'}" (click)="scrollToElement('aboutMe')">About me</a>
+            <a class="skills-link" [ngStyle]="{'padding-right': '25px'}" (click)="scrollToElement('mySkills')">Skills</a>
+            <a class="portfolio-link" (click)="scrollToElement('portfolio')">Portfolio</a>
         </div>
         <button mat-button (click)="toggleMenu()" class="toggle-mobile-menu">
             <ng-container *ngIf="!mobileMenu; else closeIcon">
@@ -23,10 +23,10 @@
             <div class="mobile-menu">
                 <mat-icon class="mobile-menu-btn close-btn">close</mat-icon>
                 <div class="link-container">
-                    <a class="about-me-link" href="#aboutMe">About me</a>
-                    <a class="skills-link" href="#mySkills">Skills</a>
-                    <a class="portfolio-link" href="#portfolio">Portfolio</a>
-                    <a class="portfolio-link" href="#contact">Contact</a>
+                    <a class="about-me-link" (click)="scrollToElement('aboutMe')">About me</a>
+                    <a class="skills-link" (click)="scrollToElement('mySkills')">Skills</a>
+                    <a class="portfolio-link" (click)="scrollToElement('portfolio')">Portfolio</a>
+                    <a class="portfolio-link" (click)="scrollToElement('contact')">Contact</a>
                 </div>
             </div>
         </ng-template>

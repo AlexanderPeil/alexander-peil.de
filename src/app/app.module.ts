@@ -14,7 +14,6 @@ import { MyProjectsComponent } from './my-projects/my-projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { ImprintComponent } from './imprint/imprint.component';
-import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -29,8 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MyProjectsComponent,
     ContactComponent,
     FooterComponent,
-    ImprintComponent,
-    MobileMenuComponent
+    ImprintComponent
   ],
   imports: [
     BrowserModule,

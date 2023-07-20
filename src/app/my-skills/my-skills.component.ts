@@ -1,4 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
 declare var AOS: any;
 
 
@@ -9,11 +10,19 @@ declare var AOS: any;
 })
 export class MySkillsComponent implements AfterViewInit {
 
+  constructor(private viewportScroller: ViewportScroller) { }
+
+
   ngAfterViewInit(): void {
     setTimeout(() => {
       AOS.init();
       AOS.refreshHard();
     }, 1000);
+  }
+  
+
+  scrollToElement(elementId: string): void {
+    this.viewportScroller.scrollToAnchor(elementId);
   }
 
   

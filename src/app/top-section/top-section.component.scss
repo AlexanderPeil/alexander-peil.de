@@ -11,6 +11,11 @@
         padding-left: 40px;
     }
 
+    .my-arms {
+        position: absolute;
+        z-index: 99;
+    }
+
     .bg-img {
         width: 690px;
         height: 671px;
@@ -353,14 +358,14 @@
 
         .my-img {
             padding-left: 0 !important;
-            padding-top: 30px;
+            // padding-top: 30px;
             height: 600px !important;
         }
     }
 
     .right-section {
         margin: unset;
-        bottom: 160px;
+        bottom: 100px;
 
         .my-name {
             margin: unset;
@@ -378,14 +383,14 @@
     .bottom-content {
 
         .bg-shadow {
-            top: -365px !important;
+            top: -310px !important;
             height: 400px;
         }
 
         .bottom-links {
             padding-top: 40px;
             position: absolute;
-            bottom: 0;
+            bottom: -65px;
         }
     }
 

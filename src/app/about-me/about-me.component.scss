@@ -115,6 +115,11 @@
             height: 380px;
         }
     }
+
+    .shadow {
+        opacity: 0.8;
+        right: -550px;
+    }
 }
 
 @media(max-width: 1000px) {
@@ -136,11 +141,6 @@
 
     .about-me-img {
         display: none;
-    }
-
-    .shadow {
-        right: -545px;
-        opacity: 0.8;
     }
 }
 

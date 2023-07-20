@@ -203,7 +203,7 @@
         }
 
         p {
-            padding-right: 100px;
+            @include padding_left_right(100px, 100px);
         }
     }
 }

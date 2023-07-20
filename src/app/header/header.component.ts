@@ -1,5 +1,6 @@
 import { Component, Renderer2 } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
+import { NavigationEnd, Router, Event as RouterEvent } from '@angular/router';
 
 
 @Component({
@@ -10,11 +11,18 @@ import { ViewportScroller } from '@angular/common';
 export class HeaderComponent {
 
 
-  constructor(private renderer: Renderer2, private viewportScroller: ViewportScroller) { }
+  constructor(private renderer: Renderer2, private viewportScroller: ViewportScroller, private router: Router) {
+    this.router.events.subscribe((event: RouterEvent) => {
+      if (event instanceof NavigationEnd) {
+        this.performScrolling();
+      }
+    });
+  }
 
 
   mobileMenu: boolean = false;
   overflowHidden: boolean = false;
+  elementId!: string;
 
 
   toggleMenu(): void {
@@ -38,8 +46,27 @@ export class HeaderComponent {
 
 
   scrollToElement(elementId: string): void {
-    this.viewportScroller.scrollToAnchor(elementId);
+    if (this.router.url !== '/') {
+      this.elementId = elementId;
+      this.router.navigateByUrl('/');
+    } else {
+      this.elementId = elementId;
+      this.performScrolling();
+    }
   }
+
+
+
+  performScrolling() {
+    setTimeout(() => {
+        const element = document.getElementById(this.elementId);
+
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, 500);
+}
+
 
 
   scrollToTop() {

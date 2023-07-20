@@ -1,41 +1,37 @@
+@import '../../variables.scss';
+
 .my-projects-top {
-    display: flex;
+    @include align_items_center;
     justify-content: flex-end;
-    align-items: center;
     padding-top: 18rem;
     width: 100vw;
 }
 
 .red-line-left {
-    background-color: #ff4747;
-    width: 140px;
-    height: 5px;
+    @include width_height(140px, 5px);
+    background-color: $secondary_color;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     margin-bottom: 45px;
 }
 
 .red-line-right {
-    background-color: #ff4747;
     width: 730px;
     height: 5px;
+    background-color: $secondary_color;
     margin-bottom: 45px;
 }
 
 h1 {
-    font-size: 90px;
-    font-weight: 700;
-    line-height: 108px;
-    color: white;
+    @include font(90px, 700, 108px);
+    color: $primary_font_color;
     text-align: center;
     margin: 0;
 }
 
 .headline {
-    color: white;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19.2px;
+    @include font(16px, 400, 19.2px);
+    color: $primary_font_color;
     text-align: center;
 }
 
@@ -57,8 +53,7 @@ h1 {
 }
 
 .project-content {
-    display: flex;
-    align-items: center;
+    @include align_items_center;
     justify-content: space-around;
     margin: 50px 100px;
 }
@@ -73,46 +68,36 @@ h1 {
 }
 
 .project {
-    display: flex;
-    flex-direction: column;
+    @include flex_direction_column;
     width: 513px;
     margin-bottom: 50px;
     z-index: 0;
 
     h2 {
-        color: #ff4747;
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 38px;
+        @include font(32px, 700, 38px);
+        color: $secondary_color;
     }
 
     span {
-        color: #fa7902;
-        font-size: 23px;
-        font-weight: 400;
-        line-height: 28px;
+        @include font(23px, 400, 28px);
+        color: $primary_font_color;
     }
 
     p {
-        color: white;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 19px;
+        @include font(16px, 400, 19px);
+        color: $primary_font_color;
     }
 
     div {
-        display: flex;
-        justify-content: space-between;
+        @include space-between;
         width: 375px;
     }
 
     button {
+        @include font(23px, 400, 28px);
+        color: $primary_font_color;
         border-radius: 10px;
         padding: 15px 30px;
-        color: white;
-        font-size: 23px;
-        font-weight: 400;
-        line-height: 28px;
         cursor: pointer;
         margin-top: 15px;
         position: relative;
@@ -120,15 +105,14 @@ h1 {
 }
 
 .live-test-btn {
+    @include width_height(152px, 58px);
     position: relative;
-    width: 152px;
-    height: 58px;
-    background-color: #ff4747;
+    background-color: $secondary_color;
     border: none;
     z-index: 1;
 
     &:before {
-        background-color: #fa7902;
+        background-color: $primary_color;
         content: "";
         inset: 0;
         position: absolute;
@@ -146,15 +130,14 @@ h1 {
 }
 
 .github-btn {
-    width: 137px;
-    height: 58px;
+    @include width_height(137px, 58px);
     background-color: #141d2f;
-    border: 1px solid #FA7902;
+    border: 1px solid $primary_color;
     z-index: 1;
 
     &:before {
+        background-color: $primary_color;
         border-radius: 10px;
-        background-color: #fa7902;
         content: "";
         inset: 0;
         position: absolute;
@@ -186,39 +169,35 @@ h1 {
 @media(max-width: 1000px) {
 
     .my-projects-mobile {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include column_center;
     }
 
     .my-projects-top {
         position: relative;
         justify-content: center;
         padding-top: 15rem;
+    }
 
-        .headline-mobile {
-            padding-right: 50px;
+    .headline-mobile {
+        padding-right: 50px;
 
-            h1 {
-                font-size: 45px;
-                line-height: 54px;
-            }
-        }
-
-        .red-line-left {
-            width: 50px;
-        }
-
-        .red-line-right {
-            width: 120px;
-            position: absolute;
-            right: 0;
+        h1 {
+            @include font(45px, 700, 54px);
         }
     }
 
+    .red-line-left {
+        width: 50px;
+    }
+
+    .red-line-right {
+        width: 120px;
+        position: absolute;
+        right: 0;
+    }
+
     .project-content {
-        flex-direction: column;
-        align-items: center;
+        @include column_center;
         margin-top: unset;
         margin-bottom: unset;
 
@@ -248,22 +227,25 @@ h1 {
     .my-projects-top {
         padding-top: 11rem;
     }
-    
+
     .project-content {
-        margin-left: unset;
-        margin-right: unset;
+        @include margin_left_right(unset, unset);
+    }
+
+    .red-line-left {
+        margin-bottom: 70px;
     }
 
     .red-line-right {
-        width: 80px !important;
+        width: 80px;
+        margin-bottom: 70px
     }
 
     .my-projects-mobile {
-        padding-left: 5%;
-        padding-right: 5%;
+        @include padding_left_right(5%, 5%);
     }
 
-    .project  {
+    .project {
         width: 100%;
 
     }
@@ -275,6 +257,6 @@ h1 {
     .buttons {
         display: flex;
         gap: 30px;
-        width: unset !important;
+        width: unset;
     }
-  }
+}

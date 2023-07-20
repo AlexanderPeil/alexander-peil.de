@@ -1,37 +1,33 @@
+@import '../../variables.scss';
+
 .my-skills {
-    display: flex;
-    justify-content: space-between;
+    @include space-between;
+    color: $primary_font_color;
     gap: 48px;
-    color: white;
     padding-top: 20rem;
     position: relative;
 
     p {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 19.2px;
+        @include font(16px, 400, 19.2px);
         margin: 0;
     }
 }
 
-.desktop-button, .mobile-button {
-    width: 200px;
-    height: 58px;
+.desktop-button,
+.mobile-button {
+    @include width_height(200px, 58px);
+    @include font (23px, 400, 28px);
+    @include button_styles;
+    background: $primary_color;
+    color: $primary_font_color;
     gap: 10px;
     padding: 15px 30px;
     border-radius: 10px;
-    background: #FA7902;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-    color: white;
-    font-size: 23px;
-    font-weight: 400;
-    line-height: 28px;
     border: none;
-    transition: all 125ms ease-in-out;
 
     &:hover {
-        background: #ff4747;
+        background: $secondary_color;
         letter-spacing: 1px;
         -webkit-box-shadow: 0px 5px 40px -10px rgba(255, 71, 71, 0.57);
         -moz-box-shadow: 0px 5px 40px -10px rgba(255, 71, 71, 0.57);
@@ -48,9 +44,7 @@
     margin-left: auto;
 
     h1 {
-        font-size: 90px;
-        font-weight: 700;
-        line-height: 108px;
+        @include font(90px, 700, 108px);
         margin: 0;
     }
 }
@@ -66,61 +60,13 @@
 }
 
 .logo-container {
-    display: flex;
+    @include column_center;
+    @include width_height(88px, 100px);
     gap: 10px;
-    flex-direction: column;
-    align-items: center;
     margin-right: 50px;
-    width: 88px;
-    height: 100px;
-
-    .skill-logos {
-        text-transform: uppercase;
-        -webkit-animation-duration: 1s;
-        animation-duration: 1s;
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both;
-        -webkit-animation-timing-function: ease-in-out;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-        -webkit-animation-iteration-count: infinite;
-
-        @keyframes bounce {
-
-            0%,
-            100%,
-            20%,
-            50%,
-            80% {
-                -webkit-transform: translateY(0);
-                -ms-transform: translateY(0);
-                transform: translateY(0)
-            }
-
-            40% {
-                -webkit-transform: translateY(-30px);
-                -ms-transform: translateY(-30px);
-                transform: translateY(-30px)
-            }
-
-            60% {
-                -webkit-transform: translateY(-15px);
-                -ms-transform: translateY(-15px);
-                transform: translateY(-15px)
-            }
-        }
-
-        &:hover {
-            cursor: pointer;
-            animation-name: bounce;
-            -moz-animation-name: bounce;
-        }
-    }
 
     p {
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 19px;
+        @include font(19px, 700, 19px);
         text-align: center;
 
         &:hover {
@@ -129,12 +75,52 @@
     }
 }
 
+.skill-logos {
+    text-transform: uppercase;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+
+    @keyframes bounce {
+
+        0%,
+        100%,
+        20%,
+        50%,
+        80% {
+            -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+            transform: translateY(0)
+        }
+
+        40% {
+            -webkit-transform: translateY(-30px);
+            -ms-transform: translateY(-30px);
+            transform: translateY(-30px)
+        }
+
+        60% {
+            -webkit-transform: translateY(-15px);
+            -ms-transform: translateY(-15px);
+            transform: translateY(-15px)
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        animation-name: bounce;
+        -moz-animation-name: bounce;
+    }
+}
+
 .my-skills-text {
-    position: relative;
-    display: flex;
+    @include column_center;
     gap: 50px;
-    flex-direction: column;
-    align-items: center;
     width: 571px;
     padding-right: 100px;
 }
@@ -164,21 +150,18 @@
     }
 
     .my-skills-headline {
-        display: flex;
-        align-items: center;
+        @include align_items_center;
 
         h1 {
-            font-size: 45px !important;
-            line-height: 54px;
+            @include font(45px, 700, 54px);
         }
+    }
 
-        .my-skills-line-resp {
-            height: 5px;
-            width: 100px;
-            background-color: #ff4747;
-            border-top-left-radius: 15px;
-            border-bottom-left-radius: 15px;
-        }
+    .my-skills-line-resp {
+        @include width_height(100px, 5px);
+        background-color: $secondary_color;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
     }
 
     .desktop-button {
@@ -186,8 +169,7 @@
     }
 
     .mobile-button-container {
-        display: flex;
-        justify-content: center;
+        @include justify_content_center;
     }
 
     .my-skills-shadow {
@@ -235,17 +217,16 @@
         padding: unset;
 
         p {
-            padding-left: 5% !important;
-            padding-right: 5% !important;
+            @include padding_left_right(5%, 5%);
         }
     }
 
     .my-skills-logos {
         padding: unset;
         column-gap: 100px;
+    }
 
-        .logo-container {
-            margin: unset;
-        }
+    .logo-container {
+        margin: unset;
     }
 }

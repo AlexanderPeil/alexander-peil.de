@@ -1,24 +1,22 @@
+@import '../../variables.scss';
+
 .line {
-    width: 100vw;
-    height: 5px;
-    background-color: #fa7902;
+    @include width_height(100vw, 5px);
+    background-color: $primary_color;
 }
 
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
+    @include space_between_center;
+    color: $primary_font_color;
     padding: 100px;
     height: 100px;
 }
 
 .footer-name {
     span {
-        color: white;
+        color: $primary_font_color;
+        @include font(35px, 700, 19px);
         text-decoration: none;
-        font-size: 35px;
-        font-weight: 700;
         cursor: pointer;
     }
 
@@ -30,39 +28,34 @@ footer {
 .imprint-container,
 .imprint-container-mobile {
     position: relative;
+}
 
-    .imprint {
-        color: white;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 19px;
+.imprint {
+    color: $primary_font_color;
+    @include font(16px, 400, 19px);
+    text-decoration: none;
 
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background-color: #ff4747;
-            transition: width 125ms ease-in-out;
-        }
+    &::after {
+        @include width_height(0, 3px);
+        background-color: $secondary_color;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: width 125ms ease-in-out;
+    }
 
-        &:hover {
-            color: #ff4747;
-        }
+    &:hover {
+        color: $secondary_color;
+    }
 
-        &:hover::after {
-            width: 48%;
-        }
+    &:hover::after {
+        width: 48%;
     }
 }
 
 .copyright {
-    font-size: 23px;
-    font-weight: 400;
-    line-height: 28px;
+    @include font(23px, 400, 28px);
 }
 
 .footer-img {
@@ -128,8 +121,7 @@ footer {
 @media(max-width: 1000px) {
 
     footer {
-        justify-content: center;
-        flex-direction: column;
+        @include colum_justify_center;
         gap: 30px;
     }
 
@@ -142,7 +134,7 @@ footer {
 
         a {
             &:hover::after {
-                width: 100% !important;
+                width: 100%;
             }
         }
     }

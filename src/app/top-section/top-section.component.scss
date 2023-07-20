@@ -1,67 +1,58 @@
+@import '../../variables.scss';
+
 .main {
-    display: flex;
-    justify-content: space-between;
-    color: white;
+    @include space-between;
+    color: $primary_font_color;
     padding-right: 100px;
     margin-top: 140px;
     position: relative;
+}
 
-    .my-img {
-        height: 800px;
-        padding-left: 40px;
-    }
+.my-img {
+    height: 800px;
+    padding-left: 40px;
+}
 
-    .my-arms {
-        position: absolute;
-        z-index: 99;
-    }
+.my-arms {
+    position: absolute;
+    z-index: 99;
+}
 
-    .bg-img {
-        width: 690px;
-        height: 671px;
-        position: absolute;
-        top: 50px;
-        left: -11px;
-        z-index: -1;
-    }
+.bg-img {
+    @include width_height(690px, 671px);
+    position: absolute;
+    top: 50px;
+    left: -11px;
+    z-index: -1;
 }
 
 .my-name {
-    display: flex;
-    align-items: center;
+    @include align_items_center;
     margin-top: 300px;
+}
 
-    .rotate {
-        transform: rotate(-90deg);
-        font-size: 66px;
-        font-weight: 400;
-        line-height: 77px;
-        margin: 0;
-    }
+.rotate {
+    @include font (66px, 400, 77px);
+    transform: rotate(-90deg);
+    margin: 0;
 }
 
 .name-job {
 
     h1 {
-        font-size: 86px;
-        font-weight: 700;
-        line-height: 108px;
+        @include font(86px, 700, 108px);
         margin: 0;
     }
 
     h2 {
-        font-size: 56px;
-        font-weight: 400;
-        line-height: 70px;
-        color: #ff4747;
+        @include font(56px, 400, 70px);
+        color: $secondary_color;
         margin: 0;
     }
 }
 
 .right-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include column_center;
     margin-top: -75px;
     position: relative;
     z-index: 2;
@@ -70,20 +61,16 @@
 .lets-talk {
 
     button {
-        color: white;
-        background: #FA7902;
+        @include button_styles;
+        @include width_height(165px, 58px);
+        @include font(23px, 400, 28px);
+        color: $primary_font_color;
+        background: $primary_color;
         box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
         padding: 15px 30px;
         border-radius: 10px;
         border: none;
-        cursor: pointer;
-        width: 165px;
-        height: 58px;
-        font-size: 23px;
-        font-weight: 400;
-        line-height: 28px;
         margin-top: 30px;
-        transition: all 125ms ease-in-out;
 
         &:hover {
             text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
@@ -107,38 +94,30 @@
 }
 
 .bottom-links {
-    z-index: 2;
-    display: flex;
-    justify-content: space-between;
+    @include space_between;
+    z-index: 101;
     width: 100vw;
 }
 
 .links {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include space_between_center;
     width: 600px;
 }
 
 .scroll-down {
+    @include column_center;
     padding-right: 42px;
     margin-top: -100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 60px;
 
     span {
+        @include font(23px, 400, 28px);
+        color: $primary_font_color;
         transform: rotate(90deg);
-        color: white;
-        font-size: 23px;
-        font-weight: 400;
-        line-height: 28px;
     }
 
     img {
-        width: 25px;
-        height: 25px;
+        @include width_height(25px, 25px);
         animation: animate-arrow 1s ease-in-out infinite;
 
         @keyframes animate-arrow {
@@ -159,9 +138,9 @@
 }
 
 .red-line {
-    height: 5px;
-    width: 100px;
-    background-color: #ff4747;
+    @include width_height(100px, 5px);
+    background-color: $secondary_color;
+    ;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 }
@@ -224,19 +203,17 @@
     position: relative;
 
     a {
-        font-size: 23px;
-        font-weight: 400;
-        line-height: 28px;
-        color: white;
+        @include font(23px, 400, 28px);
+        color: $primary_font_color;
         text-decoration: none;
         transition: transform 125ms ease-in-out;
 
         &:hover {
             color: #fff;
-            text-shadow: 0 0 5px #FA7902,
-                0 0 25px #FA7902,
-                0 0 50px #FA7902,
-                0 0 100px #FA7902;
+            text-shadow: 0 0 5px $primary_color,
+                0 0 25px $primary_color,
+                0 0 50px $primary_color,
+                0 0 100px $primary_color;
         }
     }
 }
@@ -244,25 +221,25 @@
 
 @media(max-width: 1600px) {
     .rotate {
-        font-size: 50px !important;
+        @include font (50px, 400, 77px);
         padding-top: 10px;
     }
+}
 
-    .name-job {
+.name-job {
 
-        h1 {
-            font-size: 70px;
-            margin-bottom: -25px;
-        }
-
-        h2 {
-            font-size: 45px;
-        }
+    h1 {
+        font-size: 70px;
+        margin-bottom: -25px;
     }
 
-    .bg-shadow {
-        top: -323px;
+    h2 {
+        font-size: 45px;
     }
+}
+
+.bg-shadow {
+    top: -323px;
 }
 
 @media(max-width: 1500px) {
@@ -273,32 +250,27 @@
 
 @media(max-width: 1400px) {
     .rotate {
-        font-size: 32px !important;
-        line-height: 38px;
+        @include font(32px, 400, 38px);
         padding: unset;
     }
 
     .name-job {
 
         h1 {
-            font-size: 45px;
-            line-height: 54px;
+            @include font(45px, 700, 54px);
             margin-bottom: -5px;
         }
 
         h2 {
-            font-size: 29px;
-            line-height: 35px;
+            @include font(29px, 400, 35px);
         }
     }
 
     .lets-talk {
 
         button {
-            width: 133px;
-            height: 49px;
-            font-size: 16px;
-            line-height: 19px;
+            @include width_height(133px, 49px);
+            @include font(16px, 400, 19px);
         }
     }
 
@@ -316,25 +288,25 @@
 @media(max-width: 1200px) {
 
     .my-img {
-        height: 680px !important;
+        height: 680px;
     }
 
     .bg-img {
-        left: -70px !important;
+        left: -70px;
     }
 
     .bg-shadow {
-        top: -245px !important;
+        top: -245px;
     }
 }
 
 @media(max-width: 1100px) {
     .my-img {
-        height: 650px !important;
+        height: 650px;
     }
 
     .bg-shadow {
-        top: -230px !important;
+        top: -230px;
     }
 
 }
@@ -342,34 +314,31 @@
 @media(max-width: 1000px) {
 
     .main {
-        flex-direction: column;
-        align-items: center;
+        @include column_center;
         margin-top: 90px;
         padding: unset;
         justify-content: unset;
+    }
 
-        .bg-img {
-            width: 650px;
-            height: 500px;
-            top: 35px;
-            left: unset !important;
-            opacity: 0.8;
-        }
+    .bg-img {
+        @include width_height(650px, 500px);
+        top: 35px;
+        left: unset;
+        opacity: 0.8;
+    }
 
-        .my-img {
-            padding-left: 0 !important;
-            // padding-top: 30px;
-            height: 600px !important;
-        }
+    .my-img {
+        padding-left: 0;
+        height: 600px;
     }
 
     .right-section {
         margin: unset;
         bottom: 100px;
+    }
 
-        .my-name {
-            margin: unset;
-        }
+    .my-name {
+        margin: unset;
     }
 
     .scroll-down {
@@ -380,29 +349,26 @@
         display: none;
     }
 
-    .bottom-content {
+    .bg-shadow {
+        top: -310px;
+        height: 400px;
+    }
 
-        .bg-shadow {
-            top: -310px !important;
-            height: 400px;
-        }
-
-        .bottom-links {
-            padding-top: 40px;
-            position: absolute;
-            bottom: -65px;
-        }
+    .bottom-links {
+        padding-top: 40px;
+        position: absolute;
+        bottom: -65px;
     }
 
     .links {
         position: relative;
         width: 100%;
         justify-content: center;
+    }
 
-        .red-line {
-            position: absolute;
-            left: 0;
-        }
+    .red-line {
+        position: absolute;
+        left: 0;
     }
 }
 
@@ -423,7 +389,7 @@
     }
 
     .rotate {
-        font-size: 28px !important;
+        font-size: 28px;
     }
 
     .red-line {
@@ -431,23 +397,23 @@
     }
 
     .bg-img {
-        width: 100% !important;
+        width: 100%;
     }
 }
 
 @media(max-width: 400px) {
     .rotate {
-        font-size: 22px !important;
+        font-size: 22px;
     }
 
     .name-job {
 
         h1 {
-            font-size: 28px !important;
+            font-size: 28px;
         }
 
         h2 {
-            font-size: 20px !important;
+            font-size: 20px;
         }
     }
 }

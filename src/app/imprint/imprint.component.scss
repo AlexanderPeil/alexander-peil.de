@@ -1,26 +1,27 @@
+@import '../../variables.scss';
+
 body {
     overflow: hidden;
 }
 
 .imprint-content {
-    color: white;
+    color: $primary_font_color;
     padding: 150px 100px 50px 100px;
 
     a {
+        color: $primary_font_color;
         text-decoration: none;
-        color: white;
         transition: all 125ms ease-in-out;
 
         &:hover {
-            color: #fa7902;
+            color: $primary_color;
         }
     }
 }
 
 @media(max-width: 600px) {
     .imprint-content {
-        padding-left: 5%;
-        padding-right: 5%;
+        @include padding_left_right(5%, 5%);
 
 
         h1 {

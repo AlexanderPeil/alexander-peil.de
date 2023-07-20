@@ -1,15 +1,12 @@
+@import '../../variables.scss';
+
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  @include position_fixed;
   z-index: 999;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include space_between_center;
   padding: 37px 100px;
   height: 100px;
   background-color: #141d2f;
@@ -17,10 +14,9 @@ nav {
 
 .header-name {
   span {
-    color: white;
+    @include font(35px, 700, 19px);
+    color: $primary_font_color;
     text-decoration: none;
-    font-size: 35px;
-    font-weight: 700;
     cursor: pointer;
   }
 
@@ -31,44 +27,44 @@ nav {
 
 .header-links {
   a {
-    color: white;
+    @include button_styles;
+    color: $primary_font_color;
     text-decoration: none;
     font-size: 23px;
     position: relative;
-    cursor: pointer;
 
     &::after {
+      background-color: $primary_color;
       content: '';
       position: absolute;
       bottom: 0;
       left: 0;
       width: 0;
       height: 3px;
-      background-color: #fa7902;
       transition: width 125ms ease-in-out;
     }
 
     &:hover {
-      color: #fa7902;
+      color: $primary_color;
     }
   }
 }
 
 .about-me-link {
   &:hover::after {
-    width: 82% !important;
+    width: 82%;
   }
 }
 
 .skills-link {
   &:hover::after {
-    width: 70% !important;
+    width: 70%;
   }
 }
 
 .portfolio-link {
   &:hover::after {
-    width: 100% !important;
+    width: 100%;
   }
 }
 
@@ -82,18 +78,17 @@ nav {
 }
 
 .nav-mobile-menu-item {
-  color: #fa7902;
+  color: $primary_color;
 }
 
 .mobile-menu-btn {
-  color: white;
+  @include button_styles;
+  @include width_height(45px, 45px);
+  color: $primary_font_color;
   font-size: 45px;
-  width: 45px;
-  height: 45px;
-  transition: all 125ms ease-in-out;
 
   &:hover {
-    color: #fa7902;
+    color: $primary_color;
   }
 }
 
@@ -104,34 +99,29 @@ nav {
 }
 
 .mobile-menu {
+  @include width_height(100vw, 100vh);
+  @include column_center;
+  justify-content: center;
   position: fixed;
   left: 0;
   top: 0;
-  width: 100vw;
-  height: 100vh;
   background: rgba(20, 29, 47, 80%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   z-index: 9999;
 }
 
 .link-container {
-  display: flex;
-  flex-direction: column;
+  @include flex_direction_column;
+  @include font(23px, 400, 28px);
   align-items: flex-start;
   gap: 40px;
-  font-size: 23px;
-  font-weight: 400;
 
   a {
-    color: white;
+    @include button_styles;
+    color: $primary_font_color;
     text-decoration: none;
-    transition: all 125ms ease-in-out;
 
     &:hover {
-      color: #fa7902;
+      color: $primary_color;
     }
   }
 }
@@ -150,8 +140,7 @@ nav {
 
 @media(max-width: 600px) {
   .header {
-    padding-left: 5%;
-    padding-right: 2%;
+    @include padding_left_right(5%, 2%); 
   }
 
   .header-name {

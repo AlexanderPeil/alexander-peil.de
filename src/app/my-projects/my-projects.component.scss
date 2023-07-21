@@ -63,8 +63,26 @@ h1 {
     flex-direction: row-reverse;
 }
 
+.project-img-container {
+    position: relative;
+}
+
+.epl-img-mobile {
+    height: 100px !important;
+    position: absolute;
+    bottom: 120px;
+    left: 3px;
+}
+
+.portfolio-img-mobile {
+    height: 206px;
+    position: absolute;
+    bottom: 101px;
+    right: 21px;
+}
+
 .projects-img {
-    height: 460px;
+    height: 375px;
     z-index: 0;
 }
 
@@ -165,6 +183,25 @@ h1 {
     .red-line-right {
         width: 400px;
     }
+    
+    .join-image {
+        height: 300px;
+    }
+
+    .my-projects-shadow-top {
+        opacity: 0.6;
+    }
+
+    .my-projects-shadow-bottom {
+        opacity: 0.6;
+        bottom: -100px;
+    }
+}
+
+@media(max-width: 1200px) {
+    .buttons-join-project {
+        width: 330px !important;
+    }
 }
 
 @media(max-width: 1000px) {
@@ -211,14 +248,23 @@ h1 {
         align-items: center;
     }
 
+    .epl-img-mobile {
+        bottom: 25px;
+        left: 46px;
+    }
+
+    .portfolio-img-mobile {
+        height: 166px !important;
+        bottom: 82px;
+        right: 17px;
+    }
+
     .my-projects-shadow-top {
-        opacity: 0.8;
         top: -108px;
         left: -575px;
     }
 
     .my-projects-shadow-bottom {
-        opacity: 0.8;
         bottom: 72px;
         right: -565px;
     }
@@ -258,5 +304,9 @@ h1 {
         display: flex;
         gap: 30px;
         width: unset;
+    }
+
+    .join-image {
+        height: 200px !important;
     }
 }

@@ -22,6 +22,7 @@
             <span class="message-required" [hidden]="!displayEnterMessage">Please enter your message</span>
             <button #sendButton>Send message</button>
             <img (click)="scrollToTop()" src="../../assets/img/arrow_up.png">
+            <span class="message-send" [hidden]="!displaySendMessage">Message sent successfully</span>
         </form>
     </div>
 </div>

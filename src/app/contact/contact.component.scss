@@ -177,6 +177,14 @@ form {
     transform: scaleY(-1) rotate(-90deg);
 }
 
+.message-send {
+    @include font (20px, 500, 19px);
+    color: $primary_color;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
 
 @media(max-width: 1400px) {
     .contact-top {
@@ -320,5 +328,28 @@ form {
         textarea {
             width: 100%;
         }
+
+        span {
+            left: 25px;
+        }
+    }
+
+    .name-required {
+        top: 93px;
+    }
+
+    .email-required {
+        top: 203px;
+    }
+
+    .message-required {
+        top: 457px;
+    }
+}
+
+@media(max-width: 400px) {
+    .message-send {
+        @include font(18px, 400, 19px);
+        bottom: 30px;
     }
 }

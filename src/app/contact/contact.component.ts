@@ -13,10 +13,11 @@ export class ContactComponent implements AfterViewInit {
   @ViewChild('emailField') emailField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('sendButton') sendButton!: ElementRef;
-  
+
   displayEnterName = false;
   displayEnterEmail = false;
   displayEnterMessage = false;
+  displaySendMessage = false;
 
 
   ngAfterViewInit(): void {
@@ -45,17 +46,22 @@ export class ContactComponent implements AfterViewInit {
       {
         method: 'POST',
         body: fd
-      }      
+      }
     );
+
     nameField.value = '';
     emailField.value = '';
     messageField.value = '';
+    this.displaySendMessage = true;
 
-      //Info dass Nachricht gesendet wurde
-    nameField.disabled = false;
-    emailField.disabled = false;
-    messageField.disabled = false;
-    sendButton.disabled = false;
+    setTimeout(() => {
+      nameField.disabled = false;
+      emailField.disabled = false;
+      messageField.disabled = false;
+      sendButton.disabled = false;
+      this.displaySendMessage = false;
+    }, 2000);
+
   }
 
 
@@ -87,7 +93,7 @@ export class ContactComponent implements AfterViewInit {
   showEnterMessage() {
     this.displayEnterMessage = true;
   }
-  
+
 
   hideEnterMessage() {
     this.displayEnterMessage = false;

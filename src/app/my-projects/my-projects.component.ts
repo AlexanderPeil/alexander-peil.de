@@ -9,6 +9,11 @@ declare var AOS: any;
 })
 export class MyProjectsComponent implements AfterViewInit {
 
+
+ /**
+   * Executes animations on elements after the view initialization.
+   * The library is called Animate On Scroll (AOS)
+   */
   ngAfterViewInit(): void {
     setTimeout(() => {
       AOS.init();

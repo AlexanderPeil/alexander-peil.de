@@ -12,6 +12,10 @@ export class TopSectionComponent   {
 constructor(private viewportScroller: ViewportScroller) { }
 
 
+/**
+ * Scrolls the viewport to the element specified by its identifier.
+ * @param {string} elementId - The unique ID of the DOM element to scroll to. 
+ */
 scrollToElement(elementId: string): void {
   this.viewportScroller.scrollToAnchor(elementId);
 }

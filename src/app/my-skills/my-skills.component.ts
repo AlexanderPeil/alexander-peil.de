@@ -13,6 +13,10 @@ export class MySkillsComponent implements AfterViewInit {
   constructor(private viewportScroller: ViewportScroller) { }
 
 
+  /**
+   * Executes animations on elements after the view initialization.
+   * The library is called Animate On Scroll (AOS)
+   */
   ngAfterViewInit(): void {
     setTimeout(() => {
       AOS.init();
@@ -21,11 +25,20 @@ export class MySkillsComponent implements AfterViewInit {
   }
   
 
+  /**
+   * Scrolls to the specified element.
+   * @param elem{string} elementId - The ID of the element to scroll to.
+   */
   scrollToElement(elementId: string): void {
     this.viewportScroller.scrollToAnchor(elementId);
   }
 
   
+  /**
+   * An array of objects representing the logos and their descriptions.
+   * Each object contains the path to the logo image file and a description of the logo.
+   * @type {{logos: string, description: string}[]}
+   */
   public logosContent: {logos: string, description: string}[] = [
     { logos: '../../assets/img/angular.png', description: 'Angular'},
     { logos: '../../assets/img/ts.png', description: 'TypeSript'},

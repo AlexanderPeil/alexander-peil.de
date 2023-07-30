@@ -20,8 +20,8 @@
             <textarea required type="text" cols="30" rows="10" name="message" placeholder="Your message" (focus)="showEnterMessage()"
                 (blur)="hideEnterMessage()" #messageField></textarea>
             <span class="message-required" [hidden]="!displayEnterMessage">Please enter your message</span>
-            <button #sendButton>Send message</button>
-            <img (click)="scrollToTop()" src="../../assets/img/arrow_up.png">
+            <button class="send-message" #sendButton>Send message</button>
+            <button class="scroll-to-top" (click)="scrollToTop()"></button>
             <span class="message-send" [hidden]="!displaySendMessage">Message sent successfully</span>
         </form>
     </div>

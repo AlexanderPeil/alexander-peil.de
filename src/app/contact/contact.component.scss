@@ -29,7 +29,7 @@
 
 form {
     @include column_center;
-    gap: 60px;
+    gap: 45px;
     margin-right: 100px;
     position: relative;
 
@@ -108,15 +108,15 @@ form {
 }
 
 .name-required {
-    top: 70px;
+    top: 55px;
 }
 
 .email-required {
-    top: 180px;
+    top: 150px;
 }
 
 .message-required {
-    top: 440px;
+    top: 390px;
 }
 
 .contact-left {
@@ -247,15 +247,15 @@ form {
     }
 
     .name-required {
-        top: 110px;
+        top: 95px;
     }
 
     .email-required {
-        top: 220px;
+        top: 190px;
     }
 
     .message-required {
-        top: 475px;
+        top: 430px;
     }
 }
 
@@ -296,20 +296,20 @@ form {
         }
 
         span {
-            left: 25px;
+            left: 30px;
         }
     }
 
     .name-required {
-        top: 93px;
+        top: 80px;
     }
 
     .email-required {
-        top: 203px;
+        top: 175px;
     }
 
     .message-required {
-        top: 457px;
+        top: 415px;
     }
 }
 

@@ -4,7 +4,7 @@
     @include space-between;
     color: $primary_font_color;
     padding-right: 100px;
-    margin-top: 140px;
+    margin-top: 130px;
     position: relative;
 }
 
@@ -411,5 +411,12 @@
         h2 {
             font-size: 20px;
         }
+    }
+}
+
+@media(max-width: 400px) {
+
+    .red-line {
+        width: 45px;
     }
 }

@@ -68,22 +68,24 @@ h1 {
 }
 
 .epl-img-mobile {
-    height: 100px !important;
+    height: 110px !important;
     position: absolute;
-    bottom: 120px;
-    left: 3px;
+    bottom: 130px;
 }
 
 .portfolio-img-mobile {
-    height: 206px;
+    height: 216px;
     position: absolute;
-    bottom: 101px;
-    right: 21px;
+    bottom: 132px;
+    right: 33px;
 }
 
 .projects-img {
-    height: 375px;
-    z-index: 0;
+    height: 500px;
+}
+
+.join-image {
+    height: 400px;
 }
 
 .project {
@@ -238,25 +240,30 @@ h1 {
         @include column_center;
         margin-top: unset;
         margin-bottom: unset;
+    }
 
-        img {
-            height: 300px;
-        }
+    .join-image {
+        height: 300px !important;
+    }
+
+    .projects-img {
+        height: 350px;
+    }
+
+    .portfolio-img-mobile {
+        height: 150px !important;
+        bottom: 94px;
+        right: 9px;
+    }
+
+    .epl-img-mobile {
+        height: 85px !important;
+        bottom: 66px;
+        left: 87px;
     }
 
     .project {
         align-items: center;
-    }
-
-    .epl-img-mobile {
-        bottom: 25px;
-        left: 46px;
-    }
-
-    .portfolio-img-mobile {
-        height: 166px !important;
-        bottom: 82px;
-        right: 17px;
     }
 
     .my-projects-shadow-top {
@@ -308,5 +315,59 @@ h1 {
 
     .join-image {
         height: 200px !important;
+    }
+}
+
+@media(max-width: 300px) {
+    .red-line-right {
+        width: 22px;
+    }
+
+    .headline-mobile {
+        padding: unset;
+    }
+
+    .projects-img {
+        height: 200px;
+    }
+
+    .epl-img-mobile {
+        height: 55px !important;
+        bottom: 35px;
+        left: 43px;
+    }
+
+    .portfolio-img-mobile {
+        height: 110px !important;
+        bottom: 56px;
+        right: 4px;
+    }
+
+    p {
+        padding: 0 30px;
+    }
+
+    .project {
+
+        button {
+            font-size: 18px !important;
+        }
+    }
+
+    .join-image {
+        height: 150px !important;
+    }
+
+    .live-test-btn {
+        width: 130px;
+    }
+
+    .github-btn {
+        width: 130px;
+    }
+
+    .buttons {
+        gap: 8px !important;
+        width: unset !important;
     }
 }

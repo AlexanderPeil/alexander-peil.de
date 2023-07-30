@@ -182,6 +182,7 @@
 
     .my-skills-logos {
         margin: 0;
+        padding: unset;
         width: 100%;
         justify-content: center;
     }
@@ -202,6 +203,10 @@
         p {
             @include padding_left_right(100px, 100px);
         }
+    }
+
+    .logo-container {
+        margin: 0 25px;
     }
 }
 

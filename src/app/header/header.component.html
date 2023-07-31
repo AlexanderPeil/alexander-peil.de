@@ -10,9 +10,9 @@
             </a>
         </div>
         <div class="header-links">
-            <a class="about-me-link" [ngStyle]="{'padding-right': '25px'}" (click)="scrollToElement('aboutMe')">About me</a>
-            <a class="skills-link" [ngStyle]="{'padding-right': '25px'}" (click)="scrollToElement('mySkills')">Skills</a>
-            <a class="portfolio-link" (click)="scrollToElement('portfolio')">Portfolio</a>
+            <a class="header-links-margin" (click)="scrollToElement('aboutMe')">About me</a>
+            <a class="header-links-margin" (click)="scrollToElement('mySkills')">Skills</a>
+            <a (click)="scrollToElement('portfolio')">Portfolio</a>
         </div>
         <button mat-button (click)="toggleMenu()" class="toggle-mobile-menu">
             <ng-container *ngIf="!mobileMenu; else closeIcon">

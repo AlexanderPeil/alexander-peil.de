@@ -33,40 +33,18 @@ nav {
     font-size: 23px;
     position: relative;
 
-    &::after {
-      background-color: $primary_color;
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 3px;
-      transition: width 125ms ease-in-out;
-    }
-
     &:hover {
       color: $primary_color;
+      transition: width 125ms ease-in-out;
     }
   }
 }
 
-.about-me-link {
-  &:hover::after {
-    width: 82%;
-  }
+.header-links-margin {
+  margin-right: 40px;
 }
 
-.skills-link {
-  &:hover::after {
-    width: 70%;
-  }
-}
 
-.portfolio-link {
-  &:hover::after {
-    width: 100%;
-  }
-}
 
 .toggle-mobile-menu {
   display: none;
@@ -140,7 +118,8 @@ nav {
 
 @media(max-width: 600px) {
   .header {
-    @include padding_left_right(5%, 2%); 
+    @include padding_left_right(5%, 2%);
+    @include padding_top_bottom(0, 0);
   }
 
   .header-name {

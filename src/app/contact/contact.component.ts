@@ -111,7 +111,7 @@ export class ContactComponent implements AfterViewInit {
    * This function uses the window.scrollTo method to smoothly scroll
    * the viewport to the top of the page when called.
    */
-  scrollToTop() {
+  scrollToTop(event: Event) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 

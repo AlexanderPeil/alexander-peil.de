@@ -412,11 +412,12 @@
             font-size: 20px;
         }
     }
-}
-
-@media(max-width: 400px) {
 
     .red-line {
         width: 45px;
+    }
+
+    .main {
+        margin: unset;
     }
 }

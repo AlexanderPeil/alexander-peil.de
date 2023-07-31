@@ -21,7 +21,7 @@
                 (blur)="hideEnterMessage()" #messageField></textarea>
             <span class="message-required" [hidden]="!displayEnterMessage">Please enter your message</span>
             <button class="send-message" #sendButton>Send message</button>
-            <button class="scroll-to-top" (click)="scrollToTop()"></button>
+            <button class="scroll-to-top" (click)="scrollToTop($event)"></button>
             <span class="message-send" [hidden]="!displaySendMessage">Message sent successfully</span>
         </form>
     </div>

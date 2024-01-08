@@ -1,4 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
 declare var AOS: any;
 
 
@@ -10,10 +12,10 @@ declare var AOS: any;
 export class MyProjectsComponent implements AfterViewInit {
 
 
- /**
-   * Executes animations on elements after the view initialization.
-   * The library is called Animate On Scroll (AOS)
-   */
+  /**
+    * Executes animations on elements after the view initialization.
+    * The library is called Animate On Scroll (AOS)
+    */
   ngAfterViewInit(): void {
     setTimeout(() => {
       AOS.init();

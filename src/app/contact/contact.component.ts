@@ -13,6 +13,7 @@ export class ContactComponent implements AfterViewInit {
   @ViewChild('emailField') emailField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('sendButton') sendButton!: ElementRef;
+  @ViewChild('checkbox') checkbox!: ElementRef;
 
   displayEnterName = false;
   displayEnterEmail = false;
@@ -92,6 +93,7 @@ export class ContactComponent implements AfterViewInit {
     this.nameField.nativeElement.value = '';
     this.emailField.nativeElement.value = '';
     this.messageField.nativeElement.value = '';
+    this.checkbox.nativeElement.checked = false;
   }
 
 

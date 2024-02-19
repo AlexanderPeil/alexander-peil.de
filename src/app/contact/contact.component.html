@@ -12,14 +12,20 @@
                 projects with my work.</p>
             <span>Need a Frontend developer? <b>Contact me!</b></span>
         </div>
+
         <form data-aos="flip-right" (submit)="sendMail()" ngNativeValidate #form>
-            <input required type="text" placeholder="Your name" name="name" (focus)="showEnterName()" (blur)="hideEntername()" #nameField>
+            <input type="text" placeholder="Your name" name="name" (focus)="showEnterName()" (blur)="hideEntername()" required #nameField>
             <span class="name-required" [hidden]="!displayEnterName">Please enter your name</span>
-            <input required type="email" placeholder="Your email" name="email" (focus)="showEnterEmail()" (blur)="hideEnterEmail()" #emailField>
+            <input type="email" placeholder="Your email" name="email" (focus)="showEnterEmail()" (blur)="hideEnterEmail()" required #emailField>
             <span class="email-required" [hidden]="!displayEnterEmail">Please enter your email</span>
-            <textarea required type="text" cols="30" rows="10" name="message" placeholder="Your message" (focus)="showEnterMessage()"
-                (blur)="hideEnterMessage()" #messageField></textarea>
+            <textarea type="text" cols="30" rows="10" name="message" placeholder="Your message" (focus)="showEnterMessage()"
+                (blur)="hideEnterMessage()" required #messageField></textarea>
             <span class="message-required" [hidden]="!displayEnterMessage">Please enter your message</span>
+            <div class="checkboxContainer">
+                <input type="checkbox" name="dataProtection" required #checkbox>
+                <label for="dataProtection">Please agree to my</label>  
+                <a href="/imprint">Privacy Policy</a>              
+            </div>
             <button class="send-message" #sendButton>Send message</button>
             <button class="scroll-to-top" (click)="scrollToTop($event)"></button>
             <span class="message-send" [hidden]="!displaySendMessage">Message sent successfully</span>

@@ -7,7 +7,7 @@ nav {
 
 .header {
   @include space_between_center;
-  padding: 37px 100px;
+  padding: 37px 200px;
   height: 90px;
   background-color: #141d2f;
 }
@@ -101,6 +101,13 @@ nav {
     &:hover {
       color: $primary_color;
     }
+  }
+}
+
+@media(max-width: 1250px) {
+  .header {
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }
 

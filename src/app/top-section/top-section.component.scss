@@ -3,14 +3,14 @@
 .main {
     @include space-between;
     color: $primary_font_color;
-    padding-right: 100px;
+    padding-right: 200px;
     margin-top: 130px;
     position: relative;
 }
 
 .my-img {
     height: 800px;
-    padding-left: 40px;
+    padding-left: 140px;
 }
 
 .my-arms {
@@ -22,7 +22,7 @@
     @include width_height(690px, 671px);
     position: absolute;
     top: 50px;
-    left: -11px;
+    left: 87px;
     z-index: -1;
 }
 
@@ -100,12 +100,12 @@
 
 .links {
     @include space_between_center;
-    width: 600px;
+    width: 700px;
 }
 
 .scroll-down {
     @include column_center;
-    padding-right: 42px;
+    padding-right: 142px;
     margin-top: -100px;
     gap: 60px;
 
@@ -137,7 +137,7 @@
 }
 
 .red-line {
-    @include width_height(100px, 5px);
+    @include width_height(200px, 5px);
     background-color: $secondary_color;
     ;
     border-top-right-radius: 15px;
@@ -244,7 +244,7 @@
     }
 }
 
-@media(max-width: 1400px) {
+@media(max-width: 1520px) {
     .rotate {
         @include font(32px, 400, 38px);
         padding: unset;
@@ -276,23 +276,34 @@
 }
 
 @media(max-width: 1300px) {
-    .bg-shadow {
-        top: -290px;
-    }
-}
-
-@media(max-width: 1200px) {
-
     .my-img {
         height: 680px;
     }
 
     .bg-img {
-        left: -70px;
+        left: 20px;
     }
 
     .bg-shadow {
         top: -245px;
+    }
+}
+
+@media(max-width: 1250px) {
+    .my-img {
+        padding-left: 40px;
+    }
+
+    .main {
+        padding-right: 100px;
+    }
+
+    .red-line {
+        width: 100px;
+    }
+
+    .scroll-down {
+        padding-right: 42px;
     }
 }
 

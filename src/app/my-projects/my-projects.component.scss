@@ -55,8 +55,8 @@ h1 {
 
 .project-content {
     @include align_items_center;
-    justify-content: space-around;
-    margin: 50px 100px;
+    justify-content: space-between;
+    padding: 50px 200px;
 }
 
 .project-content-reverse {
@@ -197,6 +197,17 @@ h1 {
     .my-projects-shadow-bottom {
         opacity: 0.6;
         bottom: -100px;
+    }
+}
+
+@media(max-width:1250px) {
+    .project-content {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .join-image {
+        height: 260px;
     }
 }
 

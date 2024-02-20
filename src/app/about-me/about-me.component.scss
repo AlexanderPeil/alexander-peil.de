@@ -5,7 +5,7 @@
     position: relative;
     color: $primary_font_color;
     padding-top: 10rem;
-    margin-left: 100px;
+    padding-left: 200px;
     z-index: 3;
 
 
@@ -90,6 +90,16 @@
 @media(max-width: 1400px) {
     .line {
         width: 200px;
+    }
+}
+
+@media(max-width:1250px) {
+    .about-me{
+        padding-left: 100px;
+    }
+
+    .line {
+        width: 100px;
     }
 }
 

@@ -14,7 +14,7 @@
 }
 
 .contact-red-line {
-    @include width_height(80px, 5px);
+    @include width_height(180px, 5px);
     background-color: $secondary_color;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -30,7 +30,7 @@
 form {
     @include column_center;
     gap: 45px;
-    margin-right: 100px;
+    margin-right: 200px;
     position: relative;
 
     input,
@@ -138,7 +138,7 @@ form {
 .contact-left {
     @include flex_direction_column;
     color: $primary_font_color;
-    margin-left: 100px;
+    padding: 200px;
     height: 500px;
 
     h2 {

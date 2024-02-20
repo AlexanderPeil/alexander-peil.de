@@ -51,7 +51,7 @@
     flex-wrap: wrap;
     gap: 54px;
     width: 721px;
-    padding-left: 100px;
+    padding-left: 200px;
     z-index: 0;
     width: calc(60% - 50px);
 }
@@ -119,7 +119,7 @@
     @include column_center;
     gap: 50px;
     width: 571px;
-    padding-right: 100px;
+    padding-right: 200px;
 }
 
 .my-skills-line {
@@ -127,7 +127,7 @@
     top: 50px;
     right: 0;
     height: 5px;
-    width: 75px;
+    width: 175px;
     background-color: #ff4747;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -138,6 +138,20 @@
     transform: rotate(45deg);
     top: -75px;
     left: -250px;
+}
+
+@media(max-width:1250px) {
+    .my-skills-logos {
+        padding-left: 100px;
+    }
+
+    .my-skills-text {
+        padding-right: 100px;
+    }
+
+    .my-skills-line {
+        width: 75px;
+    }
 }
 
 @media(max-width: 1000px) {
